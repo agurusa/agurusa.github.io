@@ -2,6 +2,10 @@
   font-family:"francois one";
   src:url("../fonts/francois-one/francoisone.ttf");
 }
+@font-face{
+  font-family:"Pt Sans Narrow";
+  src:url("../fonts/PT-Sans/PTN57F.ttf");
+}
 body{
   background-image:url("../imgs/octpus-hand.gif");
   background-repeat:no-repeat;
@@ -12,7 +16,12 @@ body{
 ul li a{
   transition: background .5s ease-in-out;
   -moz-transition: background .5s ease-in-out;
-  -webkit-transition: background .5s ease-in-out
+  -webkit-transition: background .5s ease-in-out;
+}
+nav ul li a{
+  transition: border .5s ease-in-out;
+  -moz-transition: border .5s ease-in-out;
+  -webkit-transition: border .5s ease-in-out;
 }
 nav{
   width:100%;
@@ -34,7 +43,6 @@ nav li{
   font-family:"Pt Sans Narrow";
   letter-spacing:6px;
   font-size: 1em;
-  font-weight: bold;
 }
 nav li a{
   text-decoration:none;
@@ -46,6 +54,7 @@ nav li a{
   margin-left:0;
   margin-bottom:5%;
   border-radius:10px;
+  border:1px solid rgba(255,255,255,.8);
 }
 nav li img{
   max-height: 100px;
@@ -101,4 +110,19 @@ ul.main-buttons li a{
 ul.main-buttons li a:hover{
   color:white;
   background-color: rgba(61, 4, 31, 0.59);
+}
+footer{
+  font-family:"Pt Sans Narrow";
+  color:black;
+  letter-spacing:6px;
+  font-size: 1em;
+  text-align:center;
+  width:100%;
+  position:absolute;
+  bottom:0%;
+  background-color:white;
+}
+footer a{
+  text-decoration:none;
+  color: black;
 }
