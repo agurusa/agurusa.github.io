@@ -65,7 +65,7 @@ nav li a{
   margin-left:0;
   margin-bottom:5%;
   border-radius:10px;
-  border:1px solid rgba(255,255,255,.8);
+  border:1px solid rgba(255,255,255,.1);
 }
 /*logo*/
 nav li img{
@@ -145,43 +145,42 @@ footer a{
   body{
     background-image:url("../imgs/octpus-hand.gif");
     background-repeat:no-repeat;
-    background-position:top;
+    background-position:bottom;
     background-attachment:fixed;
     background-size:contain;
   }
   /*navigation menu*/
   nav{
-  width:100%;
-  text-align:center;
-  position:relative;
-  top:0%;
-  background-color:none;
+    width:100%;
+    text-align:center;
+    position:relative;
+    top:0%;
+    background-color:none;
   }
   nav ul{
-  margin:0;
-  padding:0;
-  position:relative;
-  background-color:none;
+    position:relative;
+    background-color:none;
   }
   nav ul li{
-  display:block;
-  list-style-type: none;
-  text-align:center;
-  margin:0;
-  height:40px;
-  font-family:"Pt Sans Narrow";
-  letter-spacing:6px;
-  font-size: 1em;
-  position:relative;
-  top:0;
-  background-color:rgba(255,255,255,.8);
+    display:block;
+    list-style-type: none;
+    text-align:center;
+    position:relative;
+    background-color:white;
+    margin:0;
+    height:60%;
+    padding:15px 15px 15px 15px;
+    vertical-align:center;
   }
   nav li a{
-  text-decoration:none;
-  color:black;
-  text-align: center;
-  padding:10px;
-  margin:0;
+    text-decoration:none;
+    color:black;
+    text-align: center;
+    border:0px;
+    font-family:"Pt Sans Narrow";
+    letter-spacing:6px;
+    font-size: 3em;
+    padding:15px 15px 15px 15px;
   }
   nav li a img{
     max-height: 100px;
@@ -191,4 +190,48 @@ footer a{
   nav li:first-child{
     height:100px;
   }
+
+  /*main text positioning*/
+  div.main-text{
+    vertical-align:middle;
+    text-align:center;
+    position:absolute;
+    top:30%;
+    right:0;
+    bottom:0;
+    left:0;
+  }
+
+  /*h1 text formatting*/
+  h1{
+    text-align:center;
+    color:#330026;
+    position:relative;
+    width:100%;
+    font-family:"francois one";
+    letter-spacing:8px;
+    font-size:6em;
+    background-color: rgba(255,255,255,.8);
+  }
+  /*main button positioning and text formatting*/
+  ul.main-buttons li{
+    display:inline-block;
+    list-style-type: none;
+    text-align:center;
+    margin:0px 7px 10px 0px;
+    height:40px;
+    font-family:"Pt Sans Narrow";
+    letter-spacing:6px;
+    font-size: 4em;
+  }
+  ul.main-buttons li a{
+    text-decoration:none;
+    color:black;
+    text-align: center;
+    padding:10px;
+    border-radius:10px;
+    border: 2px solid #330026;
+    background-color: rgba(255,255,255,.8)
+  }
+
 }
