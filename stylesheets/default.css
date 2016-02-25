@@ -1,3 +1,4 @@
+/*add fonts*/
 @font-face{
   font-family:"francois one";
   src:url("../fonts/francois-one/FrancoisOne.ttf");
@@ -5,6 +6,8 @@
 @font-face{
   font-family:"Pt Sans Narrow";
   src:url("../fonts/PT-Sans/PTN57F.ttf");
+
+/*background image*/
 }
 body{
   background-image:url("../imgs/octpus-hand.gif");
@@ -13,6 +16,8 @@ body{
   background-attachment:fixed;
   background-size:contain;
 }
+
+/*hover effects, transitions*/
 ul li a{
   transition: background .5s ease-in-out;
   -moz-transition: background .5s ease-in-out;
@@ -23,6 +28,12 @@ nav ul li a{
   -moz-transition: border .5s ease-in-out;
   -webkit-transition: border .5s ease-in-out;
 }
+/*hover effect*/
+a.nav:hover{
+  color:#ff3399;
+  border:1px solid #ff3399;
+}
+/*navigation menu*/
 nav{
   width:100%;
   position:fixed;
@@ -56,17 +67,13 @@ nav li a{
   border-radius:10px;
   border:1px solid rgba(255,255,255,.8);
 }
+/*logo*/
 nav li img{
   max-height: 100px;
   vertical-align:middle;
 }
 
-/*hover effect*/
-a.nav:hover{
-  color:#ff3399;
-  border:1px solid #ff3399;
-}
-
+/*main text positioning*/
 div.main-text{
   vertical-align:middle;
   text-align:center;
@@ -77,6 +84,7 @@ div.main-text{
   left:0;
 }
 
+/*h1 text formatting*/
 h1{
   text-align:center;
   color:#330026;
@@ -88,6 +96,7 @@ h1{
   background-color: rgba(255,255,255,.8);
 }
 
+/*main button positioning and text formatting*/
 ul.main-buttons li{
   display:inline-block;
   list-style-type: none;
@@ -111,6 +120,8 @@ ul.main-buttons li a:hover{
   color:white;
   background-color: rgba(61, 4, 31, 0.59);
 }
+
+/*footer positioning and text formatting*/
 footer{
   font-family:"Pt Sans Narrow";
   color:black;
@@ -125,4 +136,59 @@ footer{
 footer a{
   text-decoration:none;
   color: black;
+}
+
+/*mobile design, must come last because of cascade*/
+@media only screen and (max-device-width: 480px){
+
+  /*background image*/
+  body{
+    background-image:url("../imgs/octpus-hand.gif");
+    background-repeat:no-repeat;
+    background-position:top;
+    background-attachment:fixed;
+    background-size:contain;
+  }
+  /*navigation menu*/
+  nav{
+  width:100%;
+  text-align:center;
+  position:relative;
+  top:0%;
+  background-color:none;
+  }
+  nav ul{
+  margin:0;
+  padding:0;
+  position:relative;
+  background-color:none;
+  }
+  nav ul li{
+  display:block;
+  list-style-type: none;
+  text-align:center;
+  margin:0;
+  height:40px;
+  font-family:"Pt Sans Narrow";
+  letter-spacing:6px;
+  font-size: 1em;
+  position:relative;
+  top:0;
+  background-color:rgba(255,255,255,.8);
+  }
+  nav li a{
+  text-decoration:none;
+  color:black;
+  text-align: center;
+  padding:10px;
+  margin:0;
+  }
+  nav li a img{
+    max-height: 100px;
+    position:relative;
+    top:0;
+  }
+  nav li:first-child{
+    height:100px;
+  }
 }
