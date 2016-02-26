@@ -1,0 +1,65 @@
+
+html{
+  font-family:"Pt Sans Narrow";
+  color:#404040;
+  font-size:1em;
+  letter-spacing:2px;
+}
+header{
+  position:relative;
+  text-align:center;
+  top:140px;
+}
+h1{
+  font-size:2em;
+  margin-bottom:1%;
+}
+h2{
+  font-size:1.5em;
+  margin-top:1%;
+}
+figure{
+  width:30%;
+  margin:10px 40px 10px 10px;
+  display: inline-block;
+  float: left;
+}
+figure img{
+  max-width:100%;
+  position:relative;
+  float:bottom;
+  margin:10px 10px 10px 10px;
+}
+figcaption{
+  float:left;
+  color:gray;
+}
+main{
+  position:relative;
+  max-width:75%;
+  top:130px;
+  margin-bottom:10%;
+  float:left;
+}
+aside{
+  position:fixed;
+  display:inline;
+  max-width:20%;
+  top:40%;
+  left:80%;
+  text-align:left;
+}
+aside h2{
+  margin:0 0 0 0;
+  padding:10px;
+}
+aside ul{
+  padding:0;
+}
+main a{
+  color:#ff3399;
+  text-decoration:none;
+}
+main a:hover{
+  font-weight:bold;
+}
