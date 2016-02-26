@@ -1,0 +1,62 @@
+
+header{
+  position:relative;
+  margin:20% auto 0 auto;
+  text-align:center;
+  font-family:"Pt Sans Narrow";
+  font-size:2em;
+  width:100%;
+}
+main{
+  width:100%;
+  position:relative;
+  margin:0 auto 10% auto;
+}
+.blog{
+  position:relative;
+  width:75%;
+  margin:0 auto 0 auto;
+  list-style-type:none;
+  text-align:center;
+}
+
+.blog a{
+  text-decoration:none;
+}
+
+.blog li{
+  display:inline-block;
+  position: relative;
+  width: 25%;
+  margin:2% 2% 2% 2%;
+  text-align:left;
+  border-radius:10px;
+}
+
+.blog li:hover{
+  background-color:rgba(255, 25, 140, 0.64);
+}
+/*hover effects, transitions*/
+ul li{
+  transition: background .5s ease-in-out;
+  -moz-transition: background .5s ease-in-out;
+  -webkit-transition: background .5s ease-in-out;
+}
+
+span{
+   position: absolute;
+   bottom:0;
+   left: 0;
+   color: white;
+   background: rgba(0, 0, 0, 0.7);
+   padding: 2%;
+   font-size:1em;
+  font-family:"Pt Sans Narrow";
+  border-radius:10px;
+  padding:0 1px 0 1px;
+}
+
+.blog img{
+  max-width: 100%;
+}
+

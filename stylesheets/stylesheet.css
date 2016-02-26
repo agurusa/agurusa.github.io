@@ -1,0 +1,94 @@
+/*default*/
+/*add fonts*/
+@font-face{
+  font-family:"francois one";
+  src:url("../fonts/francois-one/FrancoisOne.ttf");
+}
+@font-face{
+  font-family:"Pt Sans Narrow";
+  src:url("../fonts/PT-Sans/PTN57F.ttf");
+}
+/*navigation menu*/
+nav{
+  width:100%;
+  position:fixed;
+  top:0%;
+  text-align:left;
+  background-color: rgba(255,255,255,.8);
+  z-index:1
+}
+nav ul{
+  margin:2%;
+  padding:0;
+  height:100px;
+}
+nav li{
+  display:inline-block;
+  list-style-type: none;
+  text-align:center;
+  margin:0px 7px 10px 0px;
+  height:40px;
+  font-family:"Pt Sans Narrow";
+  letter-spacing:6px;
+  font-size: 1em;
+}
+nav li a{
+  text-decoration:none;
+  color:black;
+  text-align: center;
+  padding:10px;
+  margin-top:5%;
+  margin-right:0;
+  margin-left:0;
+  margin-bottom:5%;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,.1);
+}
+/*logo*/
+nav li img{
+  max-height: 100px;
+  vertical-align:middle;
+}
+
+.important-link{
+  text-decoration:none;
+  color:#ff3399;
+  text-align: center;
+  border:1px solid #ff3399;
+}
+
+/*hover effect*/
+nav a:hover{
+  color:#ff3399;
+  border:1px solid #ff3399;
+}
+.important-link:hover{
+  color:white;
+  background-color:rgba(61, 4, 31, 0.59);
+}
+nav ul li a{
+  transition: border .5s ease-in-out;
+  -moz-transition: border .5s ease-in-out;
+  -webkit-transition: border .5s ease-in-out;
+}
+.important-link{
+  transition: background .5s ease-in-out;
+  -moz-transition: background .5s ease-in-out;
+  -webkit-transition: background .5s ease-in-out;
+}
+footer{
+  font-family:"Pt Sans Narrow";
+  color:black;
+  letter-spacing:6px;
+  font-size: 1em;
+  text-align:center;
+  width:100%;
+  position:fixed;
+  bottom:0%;
+  background-color:white;
+}
+footer a{
+  text-decoration:none;
+  color: black;
+}
+/*end default*/
