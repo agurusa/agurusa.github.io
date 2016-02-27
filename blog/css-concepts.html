@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "utf-8">
+  <title>Aarthi Gurusami</title>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-template-stylesheet.css">
+</head>
+<body>
+<nav>
+  <ul>
+    <li><a href="../index.html"><img src="../imgs/logo.gif" alt="Aarthi Gurusami"></a></li>
+    <li><a class="important-link" href="contact page">contact.</a></li>
+    <li><a class="important-link" href="about page link">resume.</a></li>
+    <li><a href="contact page">about.</a></li>
+    <li><a href="index.html">blog.</a></li>
+    <li><a href="professional projects">professional projects.</a></li>
+  </ul>
+</nav>
+
+<header>
+  <h1>
+  Elements With Benefits: A basic guide to getting your elements to lay next to each other, nicely.
+  </h1>
+  <h2>
+    02/27/16
+  </h2>
+</header>
+<main>
+    <figure>
+      <img src="imgs/ohhaielements.png" alt= "Oh, hai.">
+      <br>
+      <figcaption>
+      It looks like these elements are getting along just fine.
+      </figcaption>
+    </figure>
+<p>
+  Today we'll be exploring some layout concepts. For this blog post, I'm going to assume that you have some working knowledge of HTML and CSS. If you don't, don't fear! There are plenty of resources out there to help you start from the ground up. Some of my favorites include <a href="http://skillcrush.com/skill-resource/a-beginners-guide-to-html-css/"> Skillcrush's</a> guide to HTML and CSS, <a href= "www.codeacademy.com">Codeacdemy's</a> free HTML and CSS course, and this <a href="http://www.aazea.com/book/html-and-css-design-and-build-websites/">PDF download</a> of <i>John Duckett's HTML & CSS: Design and Build Websites.</i> If you're a total newb and you can't function when you hear fancy words like, "element" and "code," you might want to take a look at my totally non-threatening and almost technology free post, <a href="git.html">Gits Using Git</a>.
+</p>
+<p>
+  For this post, I'll be taking some screenshots so you can see exactly what happens to our elements as we change some of their layout properties with CSS. I'll provide both the HTML and CSS code, so feel free to follow along on your own computer. Be sure to set up your HTML file, and link it with your CSS file! Let's get started.
+</p>
+<p>
+  I wrote some simple code so we have the basics of a webpage.
+</p>
+  <p>
+  <img src = "blog2code/imgs/1.png" alt ="Image1">
+</p>
+<p>
+  The code:
+</p>
+<p>
+  <img src= "blog2code/imgs/code1.png" alt="code">
+</p>
+<p>
+  When we're done with it, Element 1 and Element 2 should be sitting right next to each other, chatting it up at the bar for a late night out. But right now, our elements don't even know each other. Element 2 is at a whole different table. Let's help them out.
+</p>
+<p>
+  First we have to start by understanding why the elements lined up the way they did. If you check out the source code, you can see that we didn't exactly specify where the elements should be. All we have are size specifications (and some color, to make it pretty).
+  </p>
+  <p>
+  Currently, the elements are <b>block style</b> in <b>normal flow</b>. <code>&lt;Div&gt;</code> elements are, by HTML5 standards, block elements. Other elements, like <code>&lt;p&gt;</code> and <code>&lt;h1&gt;</code> elements, are also block elements by default. Some elements, like <code>&lt;span&gt;</code> and <code>&lt;img&gt;</code> elements are inline elements. These will behave differently, in that they will only take up as much space to the side as they have to. Let's see how things change if we make Element 1 a <code>&lt;span&gt;</code> element.
+</p>
+<p>
+  <img src="blog2code/imgs/2.png" alt="Image2">
+</p>
+<p>
+  <img src="blog2code/imgs/code2.png" alt="code">
+</p>
+<p>
+  You can see that our elements now sit right next to each other! That's great, except we can't specify a height and width property. Our elements are only as big as they need to be. Since we're not trying to put our elements on a diet, maybe <code>&lt;span&gt;</code> isn't the best option for us. Our next question is, how do we keep the size of the elements that we want, and still have them hang out with each other?
+</p>
+<p>
+  Block elements in normal flow have a default:
+</p>
+  <p><code> position: static;</code>
+</p>
+  <p>
+  We can actually change this default value to something that's a little more useful to us. There are a few different positioning schemes that we can take advantage of:
+  <ul>
+    <li>Relative </li>
+    <li>Absolute </li>
+    <li>Fixed </li>
+    <li>Floating</li>
+  </ul>
+  Absolute, fixed, and relative could get your elements to sit next to each other, but, I don't think the code is quite as nice. We'll just stick to <b>floating</b>. There are <a href="http://lmgtfy.com/">plenty of other resources</a> on the other types of positioning schemes, but <a href="http://www.w3schools.com/css/css_positioning.asp">this one</a> is my favorite.
+</p>
+<p>
+  I changed changed my elements back to <code>&lt;div&gt;</code> in the HTML, and put a <code>&lt;float&gt;</code> property into the CSS. Float positioning allows us to move an element as far in it's container element as we can. So when the code looks like this:
+</p>
+<p>
+<img src="blog2code/imgs/code3.png" alt="code">
+</p>
+  <p>
+    Our elements will look like this:
+  </p>
+  <p>
+    <img src="blog2code/imgs/3.png" alt="image 3">
+  </p>
+  <p>
+    So what happened here? According to our code, all of our elements (including the navigation bar and the footer) sit inside our main body container. Since we didn't change either of their positioning properties, they're still sitting in normal flow. Element 1 and 2, however, are now sitting at opposite corners of the bar. That's because the floated all the way to the left, and all the way to the right. That's not quite what we wanted.
+    </p>
+    <p>
+    So what if we floated Element 1 and 2 to the left? Theoretically, Element 1 will stay where it is, but Element 2 will float as far to the left as possible, in relation to the other elements. Let's give it a shot:
+  </p>
+  <p>
+  <img src="blog2code/imgs/4.png" alt="image 4">
+</p>
+<p>
+  <img src="blog2code/imgs/code4.png" alt="code">
+</p>
+<p>
+  This looks great! Elements 1 and 2 are finally next to each other. That pesky footer, though, is now the awkward third wheel. Let's get him outta there.
+</p>
+<p>
+  For that, we'll explore a concept called <b>clear</b>. Clear allows us to give an element some space from everybody else. If we clear an object's left side, no objects will sit on its left. If we clear an object's right side, no objects will sit on the right. We can even clear both sides. Let's try that on the footer.
+</p>
+<p>
+  <img src="blog2code/imgs/code5.png" alt="code">
+</p>
+<p>
+  <img src="blog2code/imgs/5.png" alt="image 5">
+</p>
+<p>
+  Wow! This is exactly what we wanted! We should be so proud. Except, it took so many commands and so many elements had to move around, that now it's 2 AM and the bar is closing and our elements didn't even have a chance to chat. Was there a way to do this quicker?
+</p>
+<p>
+  Of course! Now we can talk about the power of the <b>inline block</b>. Our elements are block elements, yes. But if we make them inline block elements, they'll sit horizontally next to each other instead of vertically! Let's give this a try. Make sure to delete all your float properties so you know it worked.
+</p>
+<p>
+  <img src="blog2code/imgs/code6.png" alt = "code">
+</p>
+<p>
+  <img src="blog2code/imgs/6.png" alt = "image 6">
+</p>
+<p>
+  You can see that all we had to do was change one property for all our divs. Now our elements can hang together all night without the pesky disturbances of footer, and all we had to do was change how they displayed themselves. This is useful when you want to create anything from a multi-column article to a horizontal navigational menu. Inline blocks are powerful tools that aren't used nearly enough because float can get us the same results. However, I did promise you that'd we'd get our elements to lay next to each other <b>nicely</b>. One little property change is the nicest introduction any element can have.
+</p>
+</main>
+<footer>
+  <p>
+  Aarthi Gurusami
+  <br>
+  (607) 738-9214
+  </p>
+</footer>
+<nav>
+  <aside>
+    <h2>other posts.</h2>
+    <ul>
+      <li><a href="git.html">Gits Using Git</a></li>
+      <li><a href="link to blog 2">Elements With Benefits</a></li>
+      <li><a href="link to blog 3">blog post 3</a></li>
+      <li><a href="link to blog 4.html">blog post 4</a></li>
+      <li><a href="link to blog 5">blog post 5</a></li>
+      <li><a href="link to blog 6">blog post 6</a></li>
+    </ul>
+  </aside>
+</nav>
+</body>
+
+</html>
