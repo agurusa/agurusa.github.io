@@ -36,25 +36,37 @@ figcaption{
 }
 main{
   position:relative;
-  max-width:75%;
+  max-width:70%;
   top:130px;
-  margin-bottom:10%;
+  margin-bottom:20%;
   float:left;
+  margin-left:5%;
 }
 aside{
   position:fixed;
-  display:inline;
+  display:inline-block;
   max-width:20%;
   top:40%;
   left:80%;
   text-align:left;
+  overflow-y:scroll;
+  height:40%;
 }
 aside h2{
   margin:0 0 0 0;
   padding:10px;
 }
-aside ul{
-  padding:0;
+aside li{
+  margin:10px 0 10px 0;
+  height:25%;
+}
+aside li a{
+  padding:10px 0 10px 0;
+}
+aside li{
+  text-align:left;
+  padding:0px;
+  line-height:2.5;
 }
 main a{
   color:#ff3399;
@@ -62,4 +74,7 @@ main a{
 }
 main a:hover{
   font-weight:bold;
+}
+img{
+  max-width:70%;
 }

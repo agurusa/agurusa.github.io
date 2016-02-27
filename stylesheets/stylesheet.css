@@ -31,6 +31,7 @@ nav li{
   font-family:"Pt Sans Narrow";
   letter-spacing:6px;
   font-size: 1em;
+  line-height:2;
 }
 nav li a{
   text-decoration:none;
