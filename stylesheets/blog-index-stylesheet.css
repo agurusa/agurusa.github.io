@@ -49,7 +49,7 @@ span{
    left: 0;
    color: white;
    background: rgba(0, 0, 0, 0.7);
-   padding: 2%;
+   padding: 0%;
    font-size:1em;
   font-family:"Pt Sans Narrow";
   border-radius:10px;
@@ -60,3 +60,6 @@ span{
   max-width: 100%;
 }
 
+h2{
+  margin:0;
+}
