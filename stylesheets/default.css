@@ -63,8 +63,9 @@ nav li a{
   margin:5% 0 5% 0;
   border:1px solid rgba(255,255,255,.1);
 }
+
 /*logo*/
-nav li img{
+#logo img{
   max-height: 100px;
   vertical-align:middle;
 }
