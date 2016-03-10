@@ -1,3 +1,7 @@
+@font-face{
+  font-family:"Pt Sans Narrow";
+  src:url("../fonts/PT-Sans/PTN57F.ttf");
+}
 
 html{
   font-family:"Pt Sans Narrow";
