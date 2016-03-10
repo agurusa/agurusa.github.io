@@ -62,9 +62,6 @@ nav ul li a{
   background-image:url("../imgs/icons/home.png");
   background-size:contain;
 }
-nav ul li img{
-  display:none;
-}
 
 #second{
   background-color:#f4ccff;
