@@ -69,7 +69,7 @@ nav ul li a{
   background-color:#c3add2;
   transform: translate(17em);
 }
-#logo{
+nav ul li img{
   display:none;
 }
 #first a{

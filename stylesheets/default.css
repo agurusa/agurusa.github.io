@@ -65,7 +65,7 @@ nav li a{
 }
 
 /*logo*/
-#logo img{
+img{
   max-height: 100px;
   vertical-align:middle;
 }
@@ -129,4 +129,5 @@ footer a{
   text-decoration:none;
   color: black;
 }
+
 
