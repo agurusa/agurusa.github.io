@@ -70,7 +70,7 @@ nav li img{
 }
 
 /*main text positioning*/
-div.main-text{
+main{
   vertical-align:middle;
   text-align:center;
   position:absolute;
