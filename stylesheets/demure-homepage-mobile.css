@@ -1,0 +1,127 @@
+@media only screen and (max-device-width: 480px){
+
+body{
+  background:none;
+}
+nav{
+  position:relative;
+  top:20em;
+  background-image:url("../imgs/Logo_background.png");
+  background-size:contain;
+  background-repeat:no-repeat;
+}
+.transition{
+  position:relative;
+  width:100%;
+  border-radius:50%;
+  border-color:#ebe0eb;
+  border-width:20px;
+  border-style:solid;
+  width: 40em;
+  height: 40em;
+  padding: 2.8em;
+  background-color:none;
+  margin:0;
+  z-index: 1
+}
+
+nav ul li{
+  display:block;
+  position:relative;
+  width:4em;
+  height:4em;
+  left:50%;
+  border-radius:50%;
+  margin:5%;
+  padding:5%;
+  vertical-align:middle;
+}
+nav ul li a{
+  position:absolute;
+  border:none;
+  color:#1b1221;
+  letter-spacing: .75em;
+  animation-duration: 3s;
+  animation-name: slideout;
+}
+
+@keyframes slideout{
+  from{
+    letter-spacing:0em;
+
+  }
+  to{
+    letter-spacing: .75em;
+  }
+}
+#first{
+  background-color:#ebe0eb;
+  transform: translate(12em);
+  background-image:url("../imgs/icons/home.png");
+  background-size:contain;
+}
+nav ul li img{
+  display:none;
+}
+
+#second{
+  background-color:#dbcee4;
+  transform: translate(17em);
+  background-image:url("../imgs/icons/about.png");
+  background-size:contain;
+}
+#third{
+  transform: translate(17em);
+  background-color:#cfbddb;
+  background-image:url("../imgs/icons/blog.png");
+  background-size:contain;
+}
+#fourth{
+  transform: translate(12em,-2em);
+  background-color:#c3add2;
+  background-image:url("../imgs/icons/projects.png");
+  background-size:contain;
+}
+#resume{
+  display:block;
+  background-color:#b79cc9;
+  transform: translate(5em,-6em);;
+  background-image:url("../imgs/icons/resume.png");
+  background-size:contain;
+}
+#contact{
+  display:block;
+  background-color:#a3d4a3;
+  transform: translate(-5em,-13em);
+  background-image:url("../imgs/icons/contact.png");
+  background-size:contain;
+}
+
+main h1{
+  position:fixed;
+  top:2em;
+}
+ul.main-buttons li{
+  border-radius:50%;
+  width:2em;
+  height:2em;
+  margin:5%;
+  padding:5%;
+}
+
+#contact_main{
+  display:none;
+}
+#resume_main{
+  display:none;
+}
+ul.main-buttons li a{
+  background-color:none;
+  border: none;
+}
+
+footer{
+  position:absolute;
+  bottom:0;
+  font-size: 2em;
+}
