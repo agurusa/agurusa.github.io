@@ -6,7 +6,7 @@ body{
 nav{
   position:relative;
   top:20em;
-  background-image:url("../imgs/logo_background.gif");
+  background-image:url("../imgs/logo_background.png");
   background-size:contain;
   background-repeat:no-repeat;
 }
@@ -24,22 +24,37 @@ nav{
   margin:0;
   z-index: 1
 }
+
 nav ul li{
   display:block;
   position:relative;
-  width:3em;
-  height:3em;
+  width:4em;
+  height:4em;
   left:50%;
   border-radius:50%;
   margin:5%;
   padding:5%;
+  vertical-align:middle;
 }
 nav ul li a{
   position:absolute;
   border:none;
   color:#1b1221;
-  letter-spacing:.75em;
+  letter-spacing: .75em;
+  animation-duration: 3s;
+  animation-name: slideout;
 }
+
+@keyframes slideout{
+  from{
+    letter-spacing:0em;
+
+  }
+  to{
+    letter-spacing: .75em;
+  }
+}
+
 #contact{
   display:block;
   background-color:#ab8cc0;
@@ -64,19 +79,18 @@ nav ul li a{
   background-color:#b79cc9;
   height:1.5em;
   width:1.5em;
-  margin:0;
+  margin:5px;
 }
 #second{
-  transform: translate(17em);
   background-color:#cfbddb;
-  transform: translate(13em);
+  transform: translate(12em,-2em);
 }
 #third{
-  transform: translate(6em,-2em);
+  transform: translate(5em,-6em);
   background-color:#dbcee4;
 }
 #fourth{
-  transform: translate(-4em,-8em);
+  transform: translate(-5em,-13em);
   background-color:#ebe0eb;
 }
 
@@ -105,5 +119,6 @@ ul.main-buttons li a{
 
 footer{
   position:absolute;
-  bottom:10%;
+  bottom:0;
+  font-size: 2em;
 }
