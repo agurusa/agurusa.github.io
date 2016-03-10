@@ -41,7 +41,7 @@ nav ul li{
 nav ul li a{
   position:absolute;
   border:none;
-  color:#1b1221;
+  color:transparent;
   letter-spacing: .75em;
   animation-duration: 3s;
   animation-name: slideout;
