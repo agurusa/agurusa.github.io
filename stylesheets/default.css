@@ -2,9 +2,11 @@
 @font-face{
   font-family:"Pt Sans Narrow";
   src:url("../fonts/PT-Sans/PTN57F.ttf");
-
-/*background image*/
 }
+html{
+  font-family:"Pt Sans Narrow";
+}
+/*background image*/
 body{
   background-image:url("../imgs/octpus-hand.gif");
   background-repeat:no-repeat;
@@ -43,24 +45,22 @@ nav ul{
 }
 nav li{
   display:inline-block;
-  list-style-type: none;
-  text-align:center;
-  margin:0px 7px 10px 0px;
-  height:40px;
-  font-family:"Pt Sans Narrow";
   letter-spacing:6px;
   font-size: 1em;
+  padding:10px;
+}
+#contact{
+  display:none;
+}
+#resume{
+  display:none;
 }
 nav li a{
   text-decoration:none;
   color:black;
-  text-align: center;
-  padding:10px;
-  margin-top:5%;
-  margin-right:0;
-  margin-left:0;
-  margin-bottom:5%;
   border-radius:10px;
+  padding:10px;
+  margin:5% 0 5% 0;
   border:1px solid rgba(255,255,255,.1);
 }
 /*logo*/
@@ -71,7 +71,6 @@ nav li img{
 
 /*main text positioning*/
 main{
-  vertical-align:middle;
   text-align:center;
   position:absolute;
   top:40%;
@@ -97,16 +96,13 @@ ul.main-buttons li{
   display:inline-block;
   list-style-type: none;
   text-align:center;
-  margin:0px 7px 10px 0px;
-  height:40px;
-  font-family:"Pt Sans Narrow";
+  padding:10px;
   letter-spacing:6px;
   font-size: 2em;
 }
 ul.main-buttons li a{
   text-decoration:none;
   color:black;
-  text-align: center;
   padding:10px;
   border-radius:10px;
   border: 2px solid #330026;
@@ -119,7 +115,6 @@ ul.main-buttons li a:hover{
 
 /*footer positioning and text formatting*/
 footer{
-  font-family:"Pt Sans Narrow";
   color:black;
   letter-spacing:6px;
   font-size: 1em;
@@ -134,119 +129,3 @@ footer a{
   color: black;
 }
 
-/*mobile design, must come last because of cascade*/
-@media only screen and (max-device-width: 480px){
-
-  /*background image*/
-  body{
-    background-image:url("../imgs/octpus-hand.gif");
-    background-repeat:no-repeat;
-    background-position:bottom;
-    background-attachment:fixed;
-    background-size:contain;
-  }
-  /*navigation menu*/
-  nav{
-    width:100%;
-    text-align:center;
-    position:absolute;
-    top:0%;
-    background-color:none;
-  }
-  nav ul{
-    position:relative;
-    background-color:none;
-    font-size: 2em;
-    padding:15px 15px 15px 15px;
-  }
-  nav ul li{
-    display:block;
-    list-style-type: none;
-    text-align:center;
-    position:relative;
-    background-color:white;
-    margin:0;
-    height:200px;
-    padding:0;
-    font-size: 2em;
-  }
-  nav li a{
-    text-decoration:none;
-    color:black;
-    text-align: center;
-    border:0px;
-    font-family:"Pt Sans Narrow";
-    letter-spacing:6px;
-    padding:15px 15px 15px 15px;
-
-  }
-  nav li a img{
-    max-height: 200px;
-    position:relative;
-    top:0;
-  }
-  nav li:first-child{
-    height:200px;
-  }
-
-  /*main text positioning*/
-  div.main-text{
-    vertical-align:middle;
-    text-align:center;
-    position:absolute;
-    top:50%;
-    right:0;
-    bottom:0;
-    left:0;
-  }
-
-  /*h1 text formatting*/
-  h1{
-    text-align:center;
-    color:#330026;
-    position:relative;
-    width:100%;
-    font-family:"Pt Sans Narrow";
-    letter-spacing:8px;
-    font-size:6em;
-    background-color: rgba(255,255,255,.8);
-  }
-  /*main button positioning and text formatting*/
-  ul.main-buttons li{
-    display:inline-block;
-    list-style-type: none;
-    text-align:center;
-    margin:0px 7px 10px 0px;
-    height:40px;
-    font-family:"Pt Sans Narrow";
-    letter-spacing:6px;
-    font-size: 4em;
-  }
-  ul.main-buttons li a{
-    text-decoration:none;
-    color:black;
-    text-align: center;
-    padding:10px;
-    border-radius:10px;
-    border: 2px solid #330026;
-    background-color: rgba(255,255,255,.8)
-  }
-
-  /*footer positioning and text formatting*/
-  footer{
-    font-family:"Pt Sans Narrow";
-    color:black;
-    letter-spacing:6px;
-    font-size: 1em;
-    text-align:center;
-    width:100%;
-    position:absolute;
-    bottom:0%;
-    background-color:white;
-  }
-  footer a{
-    text-decoration:none;
-    color: black;
-  }
-
-}
