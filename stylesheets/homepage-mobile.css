@@ -1,20 +1,22 @@
-@media only screen and (max-device-width: 480px){
+@media only screen and (max-device-width: 740px){
 
 body{
-  background:none;
+  background-image:none;
+  background-color:white;
 }
 nav{
   position:relative;
   top:20em;
-  background-image:url("../imgs/Logo_background.png");
+  background-image:url("../imgs/Logo_background_2.png");
   background-size:contain;
   background-repeat:no-repeat;
+  margin-bottom:10em;
 }
 .transition{
   position:relative;
   width:100%;
   border-radius:50%;
-  border-color:#ebe0eb;
+  border-color:#f6d7ff;
   border-width:20px;
   border-style:solid;
   width: 40em;
@@ -54,48 +56,46 @@ nav ul li a{
     letter-spacing: .75em;
   }
 }
-
-#contact{
-  display:block;
-  background-color:#ab8cc0;
+#first{
+  background-color:#f6d7ff;
   transform: translate(12em);
+  background-image:url("../imgs/icons/home.png");
+  background-size:contain;
+}
+
+#second{
+  background-color:#f4ccff;
+  transform: translate(17em);
+  background-image:url("../imgs/icons/about.png");
+  background-size:contain;
+}
+#third{
+  transform: translate(17em);
+  background-color:#eeb3ff;
+  background-image:url("../imgs/icons/blog.png");
+  background-size:contain;
+}
+#fourth{
+  transform: translate(12em,-2em);
+  background-color:#e999ff;
+  background-image:url("../imgs/icons/projects.png");
+  background-size:contain;
 }
 #resume{
   display:block;
-  background-color:#b79cc9;
-  transform: translate(17em);
+  background-color:#e380ff;
+  transform: translate(5em,-6em);;
+  background-image:url("../imgs/icons/resume.png");
+  background-size:contain;
 }
-#first{
-  background-color:#c3add2;
-  transform: translate(17em);
-}
-nav ul li img{
-  display:none;
-}
-#first a{
-  border-color:white;
-  border-style:solid;
-  border-radius:10px;
-  background-color:#b79cc9;
-  height:1.5em;
-  width:1.5em;
-  margin:5px;
-}
-#second{
-  background-color:#cfbddb;
-  transform: translate(12em,-2em);
-}
-#third{
-  transform: translate(5em,-6em);
-  background-color:#dbcee4;
-}
-#fourth{
+#contact{
+  display:block;
+  background-color:#66ffd9;
   transform: translate(-5em,-13em);
-  background-color:#ebe0eb;
+  background-image:url("../imgs/icons/contact.png");
+  background-size:contain;
 }
-
-main h1{
-  position:fixed;
+main{
   top:2em;
 }
 ul.main-buttons li{
@@ -118,7 +118,8 @@ ul.main-buttons li a{
 }
 
 footer{
-  position:absolute;
+  position:fixed;
   bottom:0;
   font-size: 2em;
+  z-index: -1;
 }

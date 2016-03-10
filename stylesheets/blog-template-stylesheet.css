@@ -8,7 +8,6 @@ html{
 header{
   position:relative;
   text-align:center;
-  top:140px;
 }
 h1{
   font-size:2em;
@@ -37,7 +36,6 @@ figcaption{
 main{
   position:relative;
   max-width:70%;
-  top:130px;
   margin-bottom:20%;
   float:left;
   margin-left:5%;
@@ -56,12 +54,16 @@ aside h2{
   margin:0 0 0 0;
   padding:10px;
 }
+
 aside li{
   margin:10px 0 10px 0;
   height:25%;
+
 }
 aside li a{
   padding:10px 0 10px 0;
+  border-radius:10px;
+  color:black;
 }
 aside li{
   text-align:left;
@@ -77,4 +79,23 @@ main a:hover{
 }
 img{
   max-width:70%;
+}
+aside ul li a{
+  transition: border .5s ease-in-out;
+  -moz-transition: border .5s ease-in-out;
+  -webkit-transition: border .5s ease-in-out;
+}
+aside a:hover{
+  color:#ff3399;
+  border:1px solid #ff3399;
+}
+.important-link:hover{
+  color:white;
+  background-color:rgba(61, 4, 31, 0.59);
+}
+
+.important-link{
+  transition: background .5s ease-in-out;
+  -moz-transition: background .5s ease-in-out;
+  -webkit-transition: background .5s ease-in-out;
 }
