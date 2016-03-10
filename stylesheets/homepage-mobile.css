@@ -96,7 +96,8 @@ nav ul li a{
   background-size:contain;
 }
 main{
-  top:2em;
+  position:absolute;
+  top:0;
 }
 ul.main-buttons li{
   border-radius:50%;
