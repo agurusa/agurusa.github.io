@@ -55,6 +55,7 @@
 header{
   letter-spacing: 7px;
   font-size:2em;
+
 }
 
 figure{
@@ -72,4 +73,8 @@ aside{
   display:none;
 }
 
+}
+
+#long_title{
+  word-break: break-all;
 }
