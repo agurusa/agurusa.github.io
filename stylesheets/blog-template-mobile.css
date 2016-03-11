@@ -1,10 +1,13 @@
 @media only screen and (max-device-width: 740px){
-
+html{
+  font-size:2em;
+}
 .main_nav{
   float:left;
   background-color:white;
   padding:0;
   max-width:200px;
+  position:fixed;
 }
 
 .main_nav ul{
@@ -57,6 +60,10 @@ header{
   font-size:2em;
 
 }
+main{
+  margin:0 200px 100px 200px;
+  font-size:1.5em;
+}
 
 figure{
   width:100%;
@@ -65,16 +72,16 @@ figcaption{
   font-size:2em;
 }
 
-p{
-  font-size:3em;
-}
 
 aside{
   display:none;
 }
 
-}
-
 #long_title{
   word-break: break-all;
+}
+
+footer{
+  position:static;
+}
 }
