@@ -5,7 +5,6 @@
   background-color:white;
   padding:0;
   max-width:200px;
-  position:fixed;
 }
 
 .main_nav ul{
@@ -53,34 +52,4 @@
   background-color:#66ffd9;
 }
 
-header{
-  letter-spacing: 7px;
-  font-size:2em;
-  margin:0 200px 0 200px
-
-}
-main{
-  margin:0 200px 100px 200px;
-  font-size:1.5em;
-}
-
-figure{
-  width:100%;
-}
-figcaption{
-  font-size:1em;
-}
-
-
-aside{
-  display:none;
-}
-
-#long_title{
-  word-break: break-all;
-}
-
-footer{
-  position:static;
-}
 }
