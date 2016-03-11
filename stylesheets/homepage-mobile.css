@@ -59,40 +59,40 @@ nav ul li a{
 #first{
   background-color:#f6d7ff;
   transform: translate(12em);
-  background-image:url("../imgs/icons/home.png");
+  background-image:url("../imgs/icons/home_small.png");
   background-size:contain;
 }
 
 #second{
   background-color:#f4ccff;
   transform: translate(17em);
-  background-image:url("../imgs/icons/about.png");
+  background-image:url("../imgs/icons/about_small.png");
   background-size:contain;
 }
 #third{
   transform: translate(14em);
   background-color:#eeb3ff;
-  background-image:url("../imgs/icons/blog.png");
+  background-image:url("../imgs/icons/blog_small.png");
   background-size:contain;
 }
 #fourth{
   transform: translate(6em,-3em);
   background-color:#e999ff;
-  background-image:url("../imgs/icons/projects.png");
+  background-image:url("../imgs/icons/projects_small.png");
   background-size:contain;
 }
 #resume{
   display:block;
   background-color:#e380ff;
   transform: translate(-6em, -12em);;
-  background-image:url("../imgs/icons/resume.png");
+  background-image:url("../imgs/icons/resume_small.png");
   background-size:contain;
 }
 #contact{
   display:block;
   background-color:#66ffd9;
   transform: translate(-19em,-27em);
-  background-image:url("../imgs/icons/contact.png");
+  background-image:url("../imgs/icons/contact_small.png");
   background-size:contain;
 }
 main{
