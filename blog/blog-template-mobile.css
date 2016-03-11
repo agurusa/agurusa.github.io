@@ -23,23 +23,6 @@
 .main_nav li a{
   position:relative;
 }
-
-.blog{
-  padding:0;
-  margin: 0 auto 0 auto;
-  width: 40em;
-}
-.blog li{
-  display:block;
-  width:80%;
-  margin:5% auto 5% auto;
-}
-
-span{
-  font-size:2em;
-  width:100%;
-  text-align:center;
-}
 #first{
   background-image:url("../imgs/icons/home_small.png");
   background-size:contain;
@@ -68,4 +51,5 @@ span{
   background-size:contain;
   background-color:#66ffd9;
 }
+
 }
