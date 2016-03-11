@@ -30,8 +30,8 @@ nav{
 nav ul li{
   display:block;
   position:relative;
-  width:4em;
-  height:4em;
+  width:6em;
+  height:6em;
   left:50%;
   border-radius:50%;
   margin:5%;
@@ -70,13 +70,13 @@ nav ul li a{
   background-size:contain;
 }
 #third{
-  transform: translate(17em);
+  transform: translate(14em);
   background-color:#eeb3ff;
   background-image:url("../imgs/icons/blog.png");
   background-size:contain;
 }
 #fourth{
-  transform: translate(12em,-2em);
+  transform: translate(6em,-3em);
   background-color:#e999ff;
   background-image:url("../imgs/icons/projects.png");
   background-size:contain;
@@ -84,14 +84,14 @@ nav ul li a{
 #resume{
   display:block;
   background-color:#e380ff;
-  transform: translate(5em,-6em);;
+  transform: translate(-6em, -12em);;
   background-image:url("../imgs/icons/resume.png");
   background-size:contain;
 }
 #contact{
   display:block;
   background-color:#66ffd9;
-  transform: translate(-5em,-13em);
+  transform: translate(-19em,-27em);
   background-image:url("../imgs/icons/contact.png");
   background-size:contain;
 }

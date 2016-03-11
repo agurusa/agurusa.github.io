@@ -1,0 +1,42 @@
+@media only screen and (max-device-width: 740px){
+
+.main_nav{
+  float:left;
+  background-color:white;
+  padding:0;
+  max-width:200px;
+}
+
+.main_nav ul{
+  background-color:white;
+  position:relative;
+}
+
+.main_nav li{
+  display:block;
+  height:100px;
+  width:100px;
+  position:relative;
+  z-index:4;
+}
+.main_nav li a{
+  position:relative;
+}
+
+.blog{
+  padding:0;
+  margin: 0 auto 0 auto;
+  width: 40em;
+}
+.blog li{
+  display:block;
+  width:80%;
+  margin:5% auto 5% auto;
+}
+
+span{
+  font-size:2em;
+  width:100%;
+  text-align:center;
+}
+}
