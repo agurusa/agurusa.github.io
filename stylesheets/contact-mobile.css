@@ -67,4 +67,10 @@ header{
 .contact ul{
   padding:0 0 0 0;
 }
+
+.contact li{
+  height:170px;
+  width:170px;
+}
+
 }

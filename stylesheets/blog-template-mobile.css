@@ -20,36 +20,31 @@
   position:relative;
   z-index:4;
   background-color:#f4ccff;
+  background-size:contain;
 }
 .main_nav li a{
   position:relative;
 }
 #first{
   background-image:url("../imgs/icons/home_small.png");
-  background-size:contain;
-  background-color:#f4ccff;
 }
 
 #second{
   background-image:url("../imgs/icons/about_small.png");
-  background-size:contain;
+
 }
 #third{
   background-image:url("../imgs/icons/blog_small.png");
-  background-size:contain;
 }
 #fourth{
   background-image:url("../imgs/icons/projects_small.png");
-  background-size:contain;
 }
 #resume{
   background-image:url("../imgs/icons/resume_small.png");
-  background-size:contain;
   background-color:#66ffd9;
 }
 #contact{
   background-image:url("../imgs/icons/contact_small.png");
-  background-size:contain;
   background-color:#66ffd9;
 }
 
@@ -82,4 +77,5 @@ aside{
 footer{
   position:static;
 }
+
 }
