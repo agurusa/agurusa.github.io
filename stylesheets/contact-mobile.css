@@ -1,15 +1,19 @@
 @media only screen and (max-device-width: 740px){
 
+body{
+background-image:url("../imgs/octopus_hand_2.png");
+background-position:bottom;
+}
 .main_nav{
   float:left;
-  background-color:white;
+  background-color:transparent;
   padding:0;
   max-width:200px;
   position:fixed;
 }
 
 .main_nav ul{
-  background-color:white;
+  background-color:transparent;
   position:relative;
 }
 
@@ -43,43 +47,24 @@
   background-size:contain;
 }
 #resume{
+  display:block;
   background-image:url("../imgs/icons/resume_small.png");
   background-size:contain;
   background-color:#66ffd9;
 }
 #contact{
+  display:block;
   background-image:url("../imgs/icons/contact_small.png");
   background-size:contain;
   background-color:#66ffd9;
 }
-
 header{
   letter-spacing: 7px;
   font-size:2em;
   margin:0 200px 0 200px;
+  background-color:none;
 }
-main{
-  margin:0 200px 100px 200px;
-  font-size:1.5em;
-}
-
-figure{
-  width:100%;
-}
-figcaption{
-  font-size:1em;
-}
-
-
-aside{
-  display:none;
-}
-
-#long_title{
-  word-break: break-all;
-}
-
-footer{
-  position:static;
+.contact ul{
+  padding:0 0 0 0;
 }
 }
