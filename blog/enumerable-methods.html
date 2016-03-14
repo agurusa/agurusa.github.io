@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "utf-8">
+  <title>Aarthi Gurusami</title>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-template-stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-template-mobile.css">
+</head>
+<body>
+<nav class = "main_nav">
+      <ul class="transition">
+        <li id= "first"><a href="../index.html">home</a>
+        <li id="second"><a href="link to about me page">about</a></li>
+        <li id="third"><a href="index.html">blog</a></li>
+        <li id="fourth"><a href="https://github.com/agurusa">projects</a></li>
+        <li id = "resume"><a href="resume page">resume</a></li>
+        <li id = "contact"><a href="../contact.html">contact</a></li>
+      </ul>
+    </nav>
+
+<header>
+  <h1>
+  Paul: Give me my money.
+  </h1>
+  <h2>
+    How to use enumerable methods to get money from Paul.
+  </h2>
+  <h2>
+    03/13/2016
+  </h2>
+</header>
+<main>
+    <figure>
+      <img src="imgs/money.png" alt= "Give me my money">
+      <br>
+      <figcaption>
+      "Give me my money!" - Stewie, Family Guy
+      </figcaption>
+    </figure>
+  <p>
+  If I'm talking to Paul about how much money he owes me (for the 19th time), I could pull out my handy dandy Money Owed list, and read it off to him.
+</p>
+<p>
+  "Hey Paul. You owe me money. $50 for dinner on Friday, $26 for drinks on Saturday, $80 for doing your homework*, $32 for Tacos on Tuesday, and $43 for margaritas at Taco Tuesday."
+</p>
+<p>
+  *I'm smarter than Paul, and need to make some money. Don't judge.
+</p>
+<p>
+  <img src = "blog4code/1.png">
+</p>
+<p>
+  Going through the items on my list one by one is the same thing as enumerating through them. The Enumerable module in Ruby is one of the coolest, because it allows you to go through each of the items in a collection and do something to them. If, for example, I want to enumerate through my money owed list and print out a hardcopy for Paul, I can do this:
+</p>
+<img src = "blog4code/2.png"> <img src = "blog4code/r1.png">
+</p>
+<p>
+  See that .each method that I'm using on my hash? It means that I'm going through each one of the items in my list and puts-ing them out. If you can use the .each method on your list, you can use a method from the enumerable module.
+</p>
+<p>
+  If you want to take a look at all the methods available to you through the enumerable module, take a look at the <a href = "http://ruby-doc.org/core-2.3.0/Enumerable.html">Ruby Docs</a>. They can be a little overwhelming, so I'll go through a couple that I think will be helpful (aka the ones that will help Paul remember how much money he owes me).
+</p>
+<p>
+Let's say I wanted to print out everything that Paul owed me that was more than $30. I would have to iterate over each item in the list, and compare it to 30. If the amount owed is more than 30, I want to print it. If not, we won't print it out (sometimes you have to pick your battles with Paul).
+</p>
+<p>
+We could use the .each method and a for/else statement:
+</p>
+<p>
+<img src = "blog4code/3.png">
+</p>
+<p>
+  OR, we can be <del>lazy</del> efficient, and use a method from the enumerable module. Let's go with .find_all:
+</p>
+<p>
+<img src = "blog4code/4.png"> <img src = "blog4code/r4.png">
+</p>
+<p>
+If I wanted to find out how many things Paul owes me for, I can count the size of my list. This is the same as iterating over the entire list, and keeping track of how many items I was iterating over. We can write this like so:
+</p>
+<p>
+<img src = "blog4code/5.png">
+</p>
+<p>
+to end up with 5. OR, use the handy .count method from the enumerable module:
+</p>
+<p>
+<img src = "blog4code/6.png">
+</p>
+<p>
+  to yield the exact same result.
+</p>
+<p>
+Let's say Paul wants to be on a payment plan. He wants to pay off the smallest sum first. We could iterate over the whole list and compare amounts, OR, you guessed it, use a method from the enumerable module. In this case, .min:
+</p>
+<p>
+<img src = "blog4code/7.png"> <img src = "blog4code/r7.png">
+</p>
+<p>
+What about if I wanted to group together all the things that Paul owes me for, by the reason he owes me? We can use a handy method: .group_by:
+</p>
+<p>
+<img src = "blog4code/8.png"> <img src = "blog4code/r8.png">
+</p>
+<p>
+What if Paul only has $10 bills on him, so he contests that he can't start paying me because I don't have any change? Well, let's get him a list of what he can pay me for using just $10 bills:
+</p>
+<p>
+<p>
+<img src = "blog4code/9.png"> <img src = "blog4code/r9.png">
+</p>
+<p>
+And finally, let's show Paul how much money he'd owe me if I added 20% interest on each item as a late fee:
+<p>
+<img src = "blog4code/10.png"> <img src = "blog4code/r10.png">
+</p>
+<p>
+  And sum it up for him:
+</p>
+<p>
+<img src = "blog4code/11.png"> <img src = "blog4code/r11.png">
+</p>
+<p>
+  There you have it. Paul, give me my money. I've told you now in 11 different ways.
+</p>
+
+
+
+
+
+</main>
+
+<footer>
+  <p>
+  Aarthi Gurusami
+  <br>
+  (607) 738-9214
+  </p>
+</footer>
+<nav>
+  <aside>
+    <h2>other posts.</h2>
+    <ul>
+      <li><a href="git.html">Gits Using Git</a></li>
+      <li><a href="css-concepts.html">Elements With Benefits</a></li>
+      <li><a href="arrays-hashes.html">#hashlikeyoumeanit</a></li>
+      <li><a href="enumerable-methods.html">Paul: Give me my money.</a></li>
+      <li><a href="link to blog 5">blog post 5</a></li>
+      <li><a href="link to blog 6">blog post 6</a></li>
+    </ul>
+  </aside>
+</nav>
+</body>
+
+</html>
