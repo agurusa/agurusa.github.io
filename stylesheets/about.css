@@ -1,0 +1,18 @@
+body{
+  background-image:url("../imgs/about.png");
+  background-position:right;
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-attachment:fixed;
+}
+
+h1{
+  text-align:center;
+  color:#330026;
+  position:relative;
+  width:100%;
+  font-family:"Pt Sans Narrow";
+  letter-spacing:8px;
+  font-size:4em;
+  background-color: rgba(255,255,255,.8);
+}
