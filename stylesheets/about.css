@@ -55,12 +55,12 @@ main a:hover{
   display:block;
 }
 
-#books{
-  background-image:url("../imgs/books.png");
-}
 #circus{
   background-image:url("../imgs/flowfest.jpg");
 }
 #circus2{
   background-image:url("../imgs/circus.jpg");
+}
+#bike{
+  background-image:url("../imgs/bike.png");
 }
