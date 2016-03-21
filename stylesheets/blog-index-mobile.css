@@ -24,6 +24,10 @@
   position:relative;
 }
 
+header{
+  font-size:4em;
+}
+
 .blog{
   padding:0;
   margin: 0 auto 0 auto;
