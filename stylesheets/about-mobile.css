@@ -66,6 +66,10 @@ footer{
   bottom:0;
 }
 
+.dropdown{
+  color:black;
+}
+
 .dropdown-content{
   display:inline-block;
 }
