@@ -31,15 +31,20 @@ main{
 
 .blog a{
   text-decoration:none;
+  padding: 0 80% 15em 0;
 }
 
 .blog li{
   display:inline-block;
   position: relative;
   width: 25%;
+  height: 15em;
   margin:2% 2% 2% 2%;
   text-align:left;
   border-radius:10px;
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-position:center;
 }
 
 .blog li:hover{
@@ -53,9 +58,9 @@ ul li{
 }
 
 span{
-   position: absolute;
-   bottom:0;
-   left: 0;
+  position:absolute;
+  bottom:0;
+  width:100%;
    color: white;
    background: rgba(60, 0, 77, 0.7);
    padding: 0%;
@@ -64,10 +69,31 @@ span{
   padding:0 1px 0 1px;
 }
 
-.blog img{
-  max-width: 100%;
-}
-
 h2{
   margin:0;
+}
+
+#git{
+  background-image:url("../blog/imgs/github-cat.png");
+  background-size:contain;
+}
+
+#css{
+  background-image:url("../blog/imgs/ohhaielements.png");
+}
+
+#hash{
+  background-image:url("../blog/imgs/feelthebern.png");
+}
+
+#enumerable{
+  background-image:url("../blog/imgs/money.png");
+}
+
+#classes{
+  background-image:url("../blog/imgs/unicorn.png");
+}
+
+#template{
+  background-image:url("../blog/imgs/sample-image.png");
 }
