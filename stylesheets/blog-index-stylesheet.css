@@ -8,12 +8,14 @@ html{
 }
 
 header{
-  position:relative;
   text-align:center;
+  width:50%;
   font-family:"Pt Sans Narrow";
+  margin:0 auto 0 auto;
+  letter-spacing:8px;
   font-size:2em;
-  width:100%;
 }
+
 main{
   width:100%;
   position:relative;

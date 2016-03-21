@@ -1,13 +1,15 @@
-.my_picture{
-  background-image:url("../imgs/about.png");
+body{
+  background-image:url("../imgs/Logo_background_light.png");
   background-repeat:no-repeat;
-  background-size:contain;
   background-position:right;
-  width:20em;
-  height:20em;
-  border-radius:50%;
-  margin: 0 0 0 0;
-  float:right;
+  background-attachment:fixed;
+  background-size:contain;
+}
+
+main{
+  width:75%;
+  margin:0 auto 10em auto;
+  text-align:center;
 }
 
 h1{
@@ -19,17 +21,6 @@ h1{
   font-size:4em;
 }
 
-main{
-  width:80%;
-  margin:0 auto 0 auto;
-  text-align:center;
-}
-
-.writing{
-  margin: 0 auto 0 auto;
-  width:40%;
-}
-
 main a{
   color:#ff3399;
   text-decoration:none;
@@ -38,29 +29,41 @@ main a:hover{
   font-weight:bold;
 }
 
+main p{
+  font-size:20px;
+}
+
 .dropdown{
   color:#ff3399;
 }
 .dropdown-content{
   display:none;
-  width:100%;
+  width:10em;
   height:10em;
   background-size:contain;
   background-repeat:no-repeat;
   color:black;
   background-position:center;
-  border-radius:20px;
-}
-.dropdown:hover .dropdown-content{
-  display:block;
+  border-radius:50%;
 }
 
-#books{
-  background-image:url("../imgs/books.png");
+.dropdown:hover .dropdown-content{
+  display:inline-block;
 }
+
 #circus{
   background-image:url("../imgs/flowfest.jpg");
+  background-size: auto 100%;
 }
 #circus2{
   background-image:url("../imgs/circus.jpg");
+}
+#bike{
+  background-image:url("../imgs/bike.png");
+  background-size: auto 100%;
+}
+
+#me{
+  background-image:url("../imgs/about.png");
+  background-color:#fdf8c8;
 }
