@@ -1,0 +1,71 @@
+@media only screen and (max-device-width: 740px){
+
+body{
+  background-position:center;
+  background-repeat:no-repeat;
+}
+.main_nav{
+  float:left;
+  background-color:white;
+  padding:0;
+  max-width:200px;
+  position:fixed;
+}
+
+.main_nav ul{
+  background-color:white;
+  position:relative;
+}
+
+.main_nav li{
+  display:block;
+  height:100px;
+  width:100px;
+  position:relative;
+  z-index:4;
+  background-color:#f4ccff;
+  background-size:contain;
+}
+.main_nav li a{
+  position:relative;
+}
+#first{
+  background-image:url("../imgs/icons/home_small.png");
+}
+
+#second{
+  background-image:url("../imgs/icons/about_small.png");
+
+}
+#third{
+  background-image:url("../imgs/icons/blog_small.png");
+}
+#fourth{
+  background-image:url("../imgs/icons/projects_small.png");
+}
+#resume{
+  background-image:url("../imgs/icons/resume_small.png");
+  background-color:#66ffd9;
+}
+#contact{
+  background-image:url("../imgs/icons/contact_small.png");
+  background-color:#66ffd9;
+}
+
+main{
+  margin:0 200px 100px 200px;
+  font-size:2em;
+}
+
+header{
+  letter-spacing: 7px;
+}
+
+footer{
+  position:fixed;
+  bottom:0;
+}
+
+.dropdown-content{
+  display:inline-block;
+}
