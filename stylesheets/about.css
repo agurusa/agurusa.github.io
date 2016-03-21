@@ -67,3 +67,7 @@ main p{
   background-image:url("../imgs/about.png");
   background-color:#fdf8c8;
 }
+
+#mobile_background{
+  display:none;
+}
