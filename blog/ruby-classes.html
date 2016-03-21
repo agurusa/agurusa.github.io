@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "utf-8">
+  <title>Aarthi Gurusami</title>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-template-stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-template-mobile.css">
+</head>
+<body>
+<nav class = "main_nav">
+      <ul class="transition">
+        <li id= "first"><a href="../index.html">home</a>
+        <li id="second"><a href="../about.html">about</a></li>
+        <li id="third"><a href="index.html">blog</a></li>
+        <li id="fourth"><a href="https://github.com/agurusa">projects</a></li>
+        <li id = "resume"><a href="resume page">resume</a></li>
+        <li id = "contact"><a href="../contact.html">contact</a></li>
+      </ul>
+    </nav>
+
+<header>
+  <h1>
+  I'm drunk.
+  </h1>
+  <h2>
+    3/20/2016
+  </h2>
+</header>
+<main>
+    <figure>
+      <img src="imgs/unicorn.png" alt= "Unicorn in an airport.">
+      <br>
+      <figcaption>
+      Unicorn in an Airport.
+      </figcaption>
+    </figure>
+  <p>
+    It's late and I don't have a lot of creativity in me tonight. So I'm going to write this blog post, and you're going to help me get through it. With wine.
+  </p>
+  <p>
+    To start, I'll tell you a few things that happen to me when I drink wine:
+  </p>
+  <p>
+    1. I'll have another glass. If I've had more than 4, I'll fall asleep.
+  </p>
+  <p>
+    2. I'll start drawing much <a href = "https://www.instagram.com/p/BC_owLFzRQF/?taken-by=aarthigurusami">creepier</a> things.
+  </p>
+  <p>
+    3. Once I hit 4 glasses, I'll fall asleep. Until then, I'll party it up!
+  </p>
+  <p>
+  To make this worthy of a blog post, I suppose we'll have to throw some code in here. We're going to make a new object Class in Ruby to define all the things that happen to me when I'm drunk. We'll call it the Drunk class:
+  </p>
+  <p>
+    <pre>
+      <code>
+        class Drunk
+
+          def initialize(name)
+            @person = name
+          end
+
+        end
+      </code>
+    </pre>
+  </p>
+  <p>
+    What this code does is create a new class called Drunk, that is initialized with a name argument. Whenever you create a new class, you have to initialize it with something. Anything that will be called on throughout your class should be initialized in the initialize method. Now, when I type this into irb:
+  </p>
+  <code>
+    i = Drunk.new("aarthi")
+  </code>
+  <p>
+    I'll get a new Ruby object! Because the argument "name" that I passed into the initialize method was "aarthi", my new i object will have an instance variable @person = "aarthi". (Keep in mind, I called my new object "i" because my story is about me. Ruby objects can be named whatever you want: feel free to call your new Drunk person "my_roommmate" with name "jimmy_jay".)
+  </p>
+  <p>
+    Now that I'm our new Drunk person, we have to define some of my drunken characteristics. First, I have to figure out if I'm allowed to have another drink. We don't know how many I've had yet, so let's figure out a way to get that.
+  </p>
+  <p>
+    Instead of passing a new argument into my i object, I could just initialize the class with another variable. Since we want this program to be dynamic (I'm sure I'll find a reason to drink wine again tomorrow), let's have the program ask me how much I've had already.
+  </p>
+  <p>
+    <pre>
+      <code>
+        class Drunk
+
+          def initialize(name)
+            @person = name
+            puts "How many drinks have you had?"
+            @number_of_drinks = gets.chomp.to_i
+            end
+        end
+      </code>
+    </pre>
+  </p>
+  <p>
+    Here, I'm creating a new instance variable called @number_of_drinks that will ask me for a number, and change the String response to an Integer response. Because I defined this instance variable in the intialize method, and called on an instance by creating a new object in the class, I now have a @number_of_drinks variable that is accessible throughout my class, and is equal to a number I enter into the program after creating object i.
+  </p>
+  <p>
+    Great. So now we know how many drinks I've had. If it's any more than 4, we know I'm toast. If I want to have another, I'll have to check on that.
+  </p>
+  <p>
+    <pre>
+      <code>
+        class Drunk
+
+          def initialize(name)
+            @person = name
+            puts "How many drinks have  you had?"
+            @number_of_drinks = gets.chomp.to_i
+            end
+          end
+
+          def have_another
+            if @number_of_drinks < 4
+              @number_of_drinks += 1
+              puts "You've had #{@number_of_drinks} drinks."
+            else
+              puts "Go to bed."
+            end
+          end
+        end
+      </code>
+    </pre>
+  </p>
+  <p>
+    Now, if I run my new method have_another on my object i:
+    <code> i.have_another </code>.
+    First, my program will check the instance variable @number_of_drinks. Let's say tonight I've had 2. Because @number_of_drinks is less than 4, I will now have one more! @number_of_drinks is now equal to 3.
+  </p>
+  <p>
+    So what will happen if I run i.have_another two more times? The first time, I'll be allowed one more drink. The second time, @number_of_drinks will no longer be less than 4, and I'll be told to go to bed (boooooo).
+  </p>
+  <p>
+    Now, usually I don't really have anyone telling me to go to bed. It just sort of happens in a wine induced haze. Let's see how we'd code that:
+  </p>
+  <p>
+    <pre>
+      <code>
+    class Drunk
+
+    def initialize(name)
+      @person = name
+      puts "How many drinks have you had?"
+      @number_of_drinks = gets.chomp.to_i
+    end
+
+    def have_another
+      if @number_of_drinks < 4
+        @number_of_drinks += 1
+        puts "You've had #{@number_of_drinks} drinks."
+      else
+        go_to_bed
+      end
+    end
+
+    def go_to_bed
+      puts "#{@person} is asleep."
+    end
+
+  end
+</code>
+</pre>
+</p>
+<p>
+  Now, if I have over 4 drinks, the have_another method will automatically call on the go_to_bed method. The go_to_bed method just says that the @person is asleep.
+  </p>
+  <p>
+  If I didn't want to have_another, but instead wanted to go_to_bed, I could directly call that method using <code>i.go_to_bed </code>. Then, regardless of whether or not I hit my 4 drink max, I'd be asleep.
+</p>
+<p>
+  Now, I have to account for my strange drawings. Let's create a new method for that. It'll get called on automatically when i.have_another, as long as I didn't go_to_bed yet.
+</p>
+<p>
+  <pre>
+    <code>
+class Drunk
+
+  def initialize(name)
+    @person = name
+    puts "How many drinks have you had?"
+    @number_of_drinks = gets.chomp.to_i
+  end
+
+  def have_another
+    if @number_of_drinks < 4
+      @number_of_drinks += 1
+      puts "You've had #{@number_of_drinks} drinks."
+      draw_a_thing
+    else
+      go_to_bed
+    end
+  end
+
+  def go_to_bed
+    puts "#{@person} is asleep."
+  end
+
+  def draw_a_thing
+    art_ideas = ["a unicorn in an airport", "a melty whale", "an alien singing opera"]
+    drawing = art_ideas.sample
+    puts "You've drawn #{drawing}"
+  end
+
+end
+</code>
+</pre>
+</p>
+<p>
+  In my instance method draw_a_thing, I created an art_ideas array with all my drunken ideas for what to draw. My drawing will be a random sample from my art_ideas array. Here, you can see that I didn't actually use an instance variable. That's because the only method that calls on my drawing variable is my draw_a_thing method.
+</p>
+<p>
+  So now let's get real wild and crazy. Let's assume that, every time I drink some wine, I'll keep going till I hit 4 glasses. For that, I'll need to call on my instance methods right in my initialize step! I'll also have to turn my have_another method into a while loop, so i.have_another until i.go_to_bed.
+</p>
+<p>
+<pre>
+  <code>
+    class Drunk
+
+  def initialize(name)
+    @person = name
+    puts "How many drinks have you had?"
+    @number_of_drinks = gets.chomp.to_i
+    have_another
+  end
+
+  def have_another
+    while @number_of_drinks < 4
+      @number_of_drinks += 1
+      puts "You've had #{@number_of_drinks} drinks."
+      draw_a_thing
+    end
+      go_to_bed
+  end
+
+  def go_to_bed
+    puts "#{@person} is asleep."
+  end
+
+  def draw_a_thing
+    art_ideas = ["a unicorn in an airport", "a melty whale", "an alien singing opera"]
+    drawing = art_ideas.sample
+    puts "You've drawn #{drawing}"
+  end
+
+end
+</code>
+</pre>
+<p>
+  Pretty cool, right? All we had to do to run this entire program was create a new object in the Drunk class. After typing this into irb:
+</p>
+<p>
+  <code> i = Drunk.new("aarthi")</code>
+</p>
+<p>
+  This all happened:
+  <pre>
+    <code>
+      How many drinks have you had?
+1 #This was my response
+You've had 2 drinks.
+You've drawn an alien singing opera
+You've had 3 drinks.
+You've drawn a melty whale
+You've had 4 drinks.
+You've drawn a unicorn in an airport
+aarthi is asleep.
+</code>
+</pre>
+<p>
+  So now it looks like I owe you a drunken drawing. I'll go with what the program told me: I hope you enjoy the unicorn in an airport.
+</p>
+
+</main>
+
+<footer>
+  <p>
+  Aarthi Gurusami
+  <br>
+  (607) 738-9214
+  </p>
+</footer>
+<nav>
+  <aside>
+    <h2>other posts.</h2>
+    <ul>
+      <li><a href="git.html">Gits Using Git</a></li>
+      <li><a href="css-concepts.html">Elements With Benefits</a></li>
+      <li><a href="arrays-hashes.html">#hashlikeyoumeanit</a></li>
+      <li><a href="enumerable-methods.html">Paul: Give me my money.</a></li>
+      <li><a href="ruby-classes.html">I'm drunk.</a></li>
+      <li><a href="link to blog 6">blog post 6</a></li>
+    </ul>
+  </aside>
+</nav>
+</body>
+
+</html>
