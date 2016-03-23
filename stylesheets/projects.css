@@ -1,0 +1,69 @@
+body{
+  background-image:url("../imgs/leafgirl.png");
+  background-position:bottom;
+}
+h1{
+  background-color:transparent;
+}
+.projects{
+  width:80%;
+  margin:0 auto 0 auto;
+
+}
+.projects li{
+  display:inline-block;
+  list-style-type: none;
+  text-align:center;
+  padding:10px;
+  height:6em;
+  width:6em;
+  border-radius:50%;
+  background-color: #bfff80;
+  margin: 2% 5% 2% 5%;
+}
+.projects li:hover{
+  background-color: #80ffff;
+}
+
+#game{
+  background-image:url("../projects/game/pup.png");
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+
+#email{
+  background-image:url("../imgs/icons/email.png");
+  background-size:contain;
+}
+#linkedin{
+  background-image:url("../imgs/icons/linkedin.png");
+  background-size:contain;
+}
+#github{
+  background-image:url("../imgs/icons/projects.png");
+  background-size:contain;
+}
+.projects li a{
+  text-decoration:none;
+  color:transparent;
+  padding:25px;
+  letter-spacing:8px;
+  font-size: 2em;
+  float:left;
+}
+.projects li a:hover{
+  color:#1b1221;
+  animation-duration: .5s;
+  animation-name: slideout_2;
+}
+
+@keyframes slideout_2{
+  from{
+    letter-spacing:1px;
+
+  }
+  to{
+    letter-spacing: 8px;
+  }
+}
