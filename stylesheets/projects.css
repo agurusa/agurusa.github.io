@@ -1,13 +1,35 @@
 body{
   background-image:url("../imgs/leafgirl.png");
+  background-repeat:no-repeat;
   background-position:bottom;
+  background-attachment:fixed;
+  background-size:contain;
 }
 h1{
   background-color:transparent;
+  text-align:center;
+  width:100%;
+  font-family:"Pt Sans Narrow";
+  margin:0 auto 0 auto;
+  letter-spacing:8px;
+  font-size:4em;
+}
+#resume{
+  display:inline-block;
+  background-color:#dfff80;
+  background-image:url("../imgs/icons/resume.png");
+  background-size:contain;
+}
+#contact{
+  display:inline-block;
+  background-color:#dfff80;
+  background-image:url("../imgs/icons/contact.png");
+  background-size:contain;
 }
 .projects{
   width:80%;
   margin:0 auto 0 auto;
+  text-align:center;
 
 }
 .projects li{
