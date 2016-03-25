@@ -12,16 +12,15 @@
 // -Play with the puppy
 // -Train the puppy
 // -Do not let the puppy run away
-// -Do not let the puppy get hit by a car
 // -Do not let the puppy get attacked by another puppy
 
 // Characters:
-// -Car
+
 // -Other puppy
 // -Puppy
 
 // Objects:
-// -Car
+
 // -Other puppy
 // -Puppy(full tummy, bathroom, happiness, intelligence, health)
 
@@ -53,8 +52,7 @@
 // -when you play with the puppy, have happiness go back up.
 // -when you train the puppy, have intelligence go back up.
 
-// -IF the puppy is hit by a car
-//   -health is all the way down
+
 // -when the puppy plays with other puppy:
 //   -IF other puppy attacks:
 //     -make health go down
