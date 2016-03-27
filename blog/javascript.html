@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "utf-8">
+  <title>Aarthi Gurusami</title>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-template-stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-template-mobile.css">
+</head>
+<body>
+<nav class = "main_nav">
+      <ul class="transition">
+        <li id= "first"><a href="../index.html">home</a>
+        <li id="second"><a href="../about.html">about</a></li>
+        <li id="third"><a href="index.html">blog</a></li>
+        <li id="fourth"><a href="../projects/index.html">projects</a></li>
+        <li id = "resume"><a href="resume page">resume</a></li>
+        <li id = "contact"><a href="../contact.html">contact</a></li>
+      </ul>
+    </nav>
+
+<header>
+  <h1>
+  I'm not drunk, but I could be.
+  </h1>
+  <h2>
+    03/27/2016
+  </h2>
+</header>
+<main>
+    <figure>
+      <img src="imgs/sample-image.png" alt= "Github Cat">
+      <br>
+      <figcaption>
+      Sample image
+      </figcaption>
+    </figure>
+<p>
+In my last post, we talked a little about <a href = "ruby-classes.html">Ruby classes</a> and how they help me get drunk. We're going to compare that a bit with JavaScript constructor functions and prototypes.
+</p>
+<p>
+  On the surface, these things look extremely similar. We can make a JavaScript constructor function that provides the same information as my Ruby class**:
+</p>
+<pre>
+  <code>
+    function Drunk(name, numberOfDrinks){
+    this.person = name;
+    this.numberOfDrinks = numberOfDrinks;
+    }
+
+    var i = new Drunk("aarthi", 2);
+  </code>
+</pre>
+<p>
+  **For simplicity's sake, I provided the information for numberOfDrinks instead of asking the user to input it with a prompt().
+</p>
+<p>
+  Here, I've created a new constructor function Drunk, and a new variable i. This variable is now an object that calls on the Drunk constructor function. When we console.log(i), we get:
+</p>
+  <code>Drunk { person: 'aarthi', numberOfDrinks: 2 }</code>
+<p>
+ So far so good. The constructor function in JavaScript looks like the initialization method in Ruby, and object i looks to have the same properties.
+</p>
+<p>
+  Now let's check out what would happen if I wanted to haveAnother:
+</p>
+<pre>
+  <code>
+      Drunk.prototype.haveAnother = function(){
+        if (this.numberOfDrinks < 4) {
+          this.numberOfDrinks ++;
+          console.log("You've had " + this.numberOfDrinks + " drinks.");
+        }
+        else {
+          console.log("Go to bed.");
+        }
+      }
+    </code>
+  </pre>
+<p>
+  Woah! Prototype?! What in the world is that?
+</p>
+<p>
+  Prototypes are JavaScript's way of figuring out classes and inheritance. Here, we're saying that all Drunks that are created will be able to haveAnother, because Drunk.prototype is their parent. We can check this using
+</p>
+<code>
+  i.__proto__ === Drunk.prototype
+</code>
+<p>
+  Which returns true. Why would we want to use prototypes instead of defining haveAnother as a property of a Drunk? Because each time we create a Drunk, we want them to be able to haveAnother. If we define this function within the Drunk constructor function, it will be recreated for every new Drunk. However, if we define it as a prototype, haveAnother is created only once, and is inherited by all Drunks... all because Drunk.prototype is their parent.
+</p>
+<p>
+Let's take this idea of inhertiance a step further. All persons can drink, but only persons over 21 should drink in the US. We can create a Person using:
+<pre>
+  <code>
+    function Person(name, age, numberOfDrinks){
+      this.person = name;
+      this.age = age;
+      this.numberOfDrinks = numberOfDrinks;
+    }
+
+    Person.prototype = new Drunk();
+
+    Person.prototype.constructor = Person;
+  </code>
+</pre>
+<p>
+  The first statement creates the Person with a name, age, and numberOfDrinks. The second ensures that a Person constructor is created, and that each Person is an instance of Drunk. The third ensures that Persons know they are Persons. Now, any Person will be able to inherit Drunk functions. Let's rework our haveAnother function so we don't get any children drunk.
+</p>
+<pre>
+  <code>
+Drunk.prototype.haveAnother = function(){
+  if (this.age < 21){
+    console.log("Get out of here, kid.")
+  }
+  else if (this.numberOfDrinks < 4) {
+    this.numberOfDrinks ++;
+    console.log("You've had " + this.numberOfDrinks + " drinks.");
+  }
+  else {
+    console.log("Go to bed.");
+  }
+}
+</code>
+</pre>
+<p>
+Now if we create a new child object** and i object:
+</p>
+<pre>
+<code>
+  var child = new Person("bobby", 13)
+
+  var i = new Person("aarthi", 27, 2)
+</code>
+</pre>
+<p>
+  **Cool side note: JavaScript allows you to have optional arguments. Because I don't want child to start off with any numberOfDrinks, I can just omit the parameter entirely instead of putting 0.
+</p>
+<p>
+And try to make child.haveAnother(), we return <code>"Get out of here, kid."</code>, even though i.haveAnother() will still send me down a drunken road.
+</p>
+We can see this even clearer if we check out the return values of the following:
+<pre>
+  <code>
+child.__proto__ === Drunk.prototype;
+//returns false
+child.__proto__ === Person.prototype;
+//returns true
+child instanceof Drunk;
+//returns true
+</code>
+</pre>
+<p>
+Here we find that child is an instantiated Drunk object. It is a Person and an instance of a Drunk.
+</p>
+<p>
+If we checked out the inheritance in Ruby, we'd find that all methods of the Object Class were inherited by objects in the Drunk Class. They have all these secret, internal methods that Ruby gives them. In JavaScript, we can define prototypes directly because all of their methods are exposed. We can manipulate them and define each and every method that we want the prototype to exhibit.
+</p>
+<p>
+  This concept can be a little confusing. Check out the following resources for a little more information:
+</p>
+<ul>
+  <li><a href = "http://raganwald.com/2014/01/19/prototypes-are-not-classes.html">Prototypes Are Not Classes</a></li>
+  <li><a href = "http://tobyho.com/2010/11/22/javascript-constructors-and/">JavaScript Constructors and Prototypes</a></li>
+</ul>
+<p>
+The best way to think about this is that JavaScript is really flexible. It's a language that might be a bit more difficult to read than Ruby, but allows you to manipulate functions and prototypes on their fundamental method levels.
+</p>
+
+</main>
+
+<footer>
+  <p>
+  Aarthi Gurusami
+  <br>
+  (607) 738-9214
+  </p>
+</footer>
+<nav>
+  <aside>
+    <h2>other posts.</h2>
+    <ul>
+      <li><a href="git.html">Gits Using Git</a></li>
+      <li><a href="css-concepts.html">Elements With Benefits</a></li>
+      <li><a href="arrays-hashes.html">#hashlikeyoumeanit</a></li>
+      <li><a href="enumerable-methods.html">Paul: Give me my money.</a></li>
+       <li><a href="ruby-classes.html">I'm drunk.</a></li>
+      <li><a href="javascript.html">I'm not drunk, but I could be.</a></li>
+    </ul>
+  </aside>
+</nav>
+</body>
+
+</html>

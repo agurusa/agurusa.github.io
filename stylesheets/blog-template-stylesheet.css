@@ -53,6 +53,8 @@ aside{
   text-align:left;
   overflow-y:scroll;
   height:40%;
+  background-color:rgb(249,230,255);
+  border-radius:20px;
 }
 aside h2{
   margin:0 0 0 0;
@@ -88,10 +90,14 @@ aside ul li a{
   transition: border .5s ease-in-out;
   -moz-transition: border .5s ease-in-out;
   -webkit-transition: border .5s ease-in-out;
+  transition: background-color .5s ease-in-out;
+  -moz-transition: background-color .5s ease-in-out;
+  -webkit-transition: background-color .5s ease-in-out;
 }
 aside a:hover{
   color:#ff3399;
   border:1px solid #ff3399;
+  background-color:white;
 }
 .important-link:hover{
   color:white;
