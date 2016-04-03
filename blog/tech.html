@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "utf-8">
+  <title>Aarthi Gurusami</title>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-template-stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-template-mobile.css">
+</head>
+<body>
+<nav class = "main_nav">
+      <ul class="transition">
+        <li id= "first"><a href="../index.html">home</a>
+        <li id="second"><a href="../about.html">about</a></li>
+        <li id="third"><a href="index.html">blog</a></li>
+        <li id="fourth"><a href="../projects/index.html">projects</a></li>
+        <li id = "resume"><a href="resume page">resume</a></li>
+        <li id = "contact"><a href="../contact.html">contact</a></li>
+      </ul>
+    </nav>
+
+<header>
+  <h1>
+  toma[yh]to.
+  </h1>
+  <h2>
+    An introduction to regular expressions.
+  </h2>
+  <h2>
+    04/03/2016
+  </h2>
+</header>
+<main>
+    <figure>
+      <img src="imgs/sample-image.png" alt= "Github Cat">
+      <br>
+      <figcaption>
+      Sample image
+      </figcaption>
+    </figure>
+<p>
+  Tomayto / tomahto. Potayto/ potahto. Color/ colour. Grey/ gray. These are all commonly used words that people around the world spell differently. Because we're all inclusive and tolerant people, we can read these words and not be bothered too much if it differs from our own spelling preferences. That being said, it's easy to be thrown for a loop by how interchangable spellings can be.
+</p>
+<p>
+  Let's say that me and my good friend Becky are planning on going to the Annual Tomayto Fight in Spain. We divy up the planning responsibilities, type up separate documents detailing our trip, and merge them together on <a href = "git.html">GitHub</a>. Hooray! We're going to Spain to throw tomaytos at each other.
+</p>
+<p>
+  I run to the store in excitement to buy all the tomaytos I need. Becky was in charge of doing the tomayto estimates, so I open up our document and do a quick search for "tomayto estimate" to find my answer. But wait! Nothing comes up! Becky, did you not do your part?!
+</p>
+<p>
+  After scrolling through the document in a panic, I realize that Becky actually wrote "tomahto estimate." Phew. Just a difference in spelling. I find my answer and buy all the tomahtos I need.
+</p>
+<p>
+  Next, I'm off to pick up our matching t-shirts. I do a quick search in our document for "tomahto t-shirts." Nothing comes up! Shoot, that's right. I had actually spelled it, "tomayto t-shirts."
+</p>
+<p>
+  You can probably see how frustrating this would get over a really long document, and over something more complex than just tomayto/tomahto. That's why we use something called regular expressions. Regular expressions, or regexes, help us search for (and sometimes replace) things really quickly. We could have used a regex to find every instance of tomayto and tomahto in our document by just typing toma[yh]to. This is what we call a character class. Other examples of character classes include gr[ea]y, which searches for "grey" and "gray," and pota[yh]to, which searches for "potayto" and "potahto."
+</p>
+<p>
+  Character classes match only one out of several characters. For example, col[ou]r would search for "color" and "colur," not "colour." If we did want to search for all examples of "color" and "colour," we would have to use the regex colo?r. The question mark makes the preceding token in the regex optional.
+</p>
+<p>
+  Regexes can feel pretty complicated if you're not used to seeing them. For example, we can use regexes to check the vailidity of an email address by using \b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b. This uses a combination of special characters like brackets, dots, and slashes to search for something a little more complex than just a string. These special characters are referred to as metacharacters.
+</p>
+<p>
+  There are plenty of resources out there for proper regex syntax, but this <a href= "http://www.regular-expressions.info/tutorial.html">tutorial</a> is my personal favorite. Some of the most useful regexes include <a href = "http://www.regular-expressions.info/brackets.html">grouping</a> characters together, <a href = "http://www.regular-expressions.info/anchors.html">anchors</a>, and <a href = "http://www.regular-expressions.info/wordboundaries.html">word boundaries</a>.
+</p>
+<p>
+  Regexes are also different depending on the programming language you may be using. There are regex engines that process your regexes, and these engines are not completely compatible over different languages. This means that you'd be using a different regex "flavor" if you were looking at JavaScript than if you were looking at Ruby.
+</p>
+<p>
+  Keep in mind that regexes are flexible entities. They're efficient in both personal and computing time. That being said, they can be complex and might not search for exactly what you wanted. If you're not getting what you're looking for, remember that a regex engine always returns the left most match. It's overly excited to spit out an answer, so it gives you the first one it finds. Take a look at this <a href = "http://www.regular-expressions.info/engine.html">example</a> to understand the implications of this behavior.
+</p>
+<p>
+  So the next time Becky decides she wants to sound a little more British, we know how to deal with her. Just throw regexes in her direction, maybe along with some of those toma[yh]tos.
+</p>
+</main>
+
+<footer>
+  <p>
+  Aarthi Gurusami
+  <br>
+  (607) 738-9214
+  </p>
+</footer>
+<nav>
+  <aside>
+    <h2>other posts.</h2>
+    <ul>
+      <li><a href="git.html">Gits Using Git</a></li>
+      <li><a href="css-concepts.html">Elements With Benefits</a></li>
+      <li><a href="arrays-hashes.html">#hashlikeyoumeanit</a></li>
+      <li><a href="enumerable-methods.html">Paul: Give me my money.</a></li>
+      <li><a href="ruby-classes.html">I'm drunk.</a></li>
+      <li><a href="javascript.html">I'm not drunk, but I could be.</a></li>
+      <li><a href="tech.html">toma[yh]to.</a></li>
+    </ul>
+  </aside>
+</nav>
+</body>
+
+</html>

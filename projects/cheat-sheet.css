@@ -1,0 +1,65 @@
+@font-face{
+  font-family:"Pt Sans Narrow";
+  src:url("../fonts/PT-Sans/PTN57F.ttf");
+}
+
+html{
+  font-family:"Pt Sans Narrow";
+  color:#404040;
+  font-size:1em;
+  letter-spacing:2px;
+}
+header{
+  position:relative;
+  text-align:center;
+  background-image:url("javascript.jpg");
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-color:#efd617;
+  font-size:1.5em;
+}
+h2{
+  color:#302b03;
+}
+h3{
+  text-align:center;
+  color:#302b03;
+  width:20%;
+  float:left;
+  font-size:1.5em;
+  margin-left:10%;
+  margin-right:10%;
+}
+
+article{
+  width:80%;
+  margin: 2% auto 2% auto;
+}
+
+pre{
+  overflow-x:scroll;
+  border-radius:10px;
+}
+span{
+  color: #999999;
+}
+
+.object{
+  color: #cc33ff;
+}
+
+.property{
+  color: #ff3399;
+}
+
+.method{
+  color: #3333ff;
+}
+
+.string{
+  color: #ff9933;
+}
+
+.number{
+  color: #ff6633;
+}

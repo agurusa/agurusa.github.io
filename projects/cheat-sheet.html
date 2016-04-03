@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset ="utf-8">
+      <link rel = "stylesheet" type = "text/css" href = "cheat-sheet.css">
+      <title>JavaScript Objects</title>
+    </head>
+    <body>
+      <header>
+        <h1>JavaScript Objects</h1>
+        <h2>Syntax Reference</h2>
+      </header>
+      <main>
+        <article>
+          <h3>Creating objects</h3>
+          <pre>
+            <code>
+
+    var <span class = "object">emptyObject</span> = {};
+
+    var <span class = "object">objectWithProperties</span>={
+    <span class = "property">property1</span>: <span class = "string">"value1"</span>,
+    <span class = "property">property2</span>: <span class = "string">"value2"</span>,
+    <span class = "property">property3</span>: <span class = "string">"value3"</span>
+    };
+
+    var <span class = "object">complexObject</span> = {
+    <span class = "property">stringProperty</span>: <span class = "string">"stringValue"</span>,
+    <span class = "property">numberProperty</span>: <span class = "number">1</span>,
+    <span class = "property">methodProperty</span>: <span class = "method">function(argument)</span>{
+      return <span class = "method">argument + 5</span>;
+      }
+    };
+
+    var <span class = "object">outsideObject</span> = {
+    <span class = "property">nestedObject</span>:{
+      <span class = "property">ultraNestedObject</span>: <span class = "string">"value"</span>
+      }
+    };
+            </code>
+          </pre>
+        </article>
+        <article>
+          <h3>Accessing properties in objects</h3>
+          <pre>
+            <code>
+    return <span class = "object">objectWithProperties</span>.<span class = "property">property1</span>;
+    <span>//=>"value1"</span>
+
+    return <span class = "object">objectWithProperties</span>["<span class = "property">property1</span>"];
+    <span>//=>"value1"</span>
+
+    return <span class = "object">objectWithProperties</span>["<span class = "property">prop</span>" + "<span class = "property">erty1</span>"];
+    <span>//=>"value1"</span>
+
+    return <span class = "object">outsideObject</span>["<span class = "property">nestedObject</span>"]["<span class = "property">ultraNestedObject</span>"];
+    <span>//=>"value"</span>
+
+    return <span class = "object">outsideObject</span>.<span class = "property">nestedObject</span>;
+    <span>//=>ultraNestedObject: "value"</span>
+
+    <span class = "object">complexObject</span>.<span class = "property">methodProperty</span><span class = "method">(2)</span>;
+    <span>//=>7</span>
+
+            </code>
+          </pre>
+        </article>
+        <article>
+          <h3>Changing properties in objects</h3>
+          <pre>
+            <code>
+    console.log(<span class = "object">objectWithProperties</span>.<span class = "property">property1</span>);
+    <span>//"value1"</span>
+
+    <span class = "object">objectWithProperties</span>.<span class = "property">property1</span> = <span class = "string">"new property value"</span>;
+
+    console.log(<span class = "object">objectWithProperties</span>.<span class = "property">property1</span>);
+    <span>//"new property value"</span>
+            </code>
+          </pre>
+        </article>
+        <article>
+          <h3>Adding and deleting properties in objects</h3>
+          <pre>
+            <code>
+    console.log(<span class = "object">emptyObject</span>);
+    <span>//{}</span>
+
+    <span class = "object">emptyObject</span>.<span class = "property">property1</span> = <span class = "string">"I'm new!"</span>;
+
+    <span class = "object">emptyObject</span>["<span class = "property">property2</span>"] = <span class = "string">"Me too!"</span>;
+
+    <span class = "object">emptyObject</span>.<span class = "property">method</span> = <span class = "method">function()</span>{
+      return <span class = "method">"I'm a function in an object, so I'm a new method."</span>;
+    }
+
+    console.log(<span class = "object">emptyObject</span>);
+    <span>//{property1: "I'm new!",
+      property2: "Me too!",
+      method: function(){
+          return "I'm a new function in an object, so I'm a new method."
+        }
+      }</span>
+
+    delete <span class = "object">emptyObject</span>.<span class = "property">method</span><span class = "method">()</span>;
+
+    console.log(<span class = "object">emptyObject</span>);
+    <span>//{property1: "I'm new!",
+        property2: "Me too!"
+      }</span>
+
+            </code>
+          </pre>
+        </article>
+      </main>
+    </body>
+  </html>
