@@ -42,6 +42,8 @@ h1{
   border-radius:50%;
   background-color: #bfff80;
   margin: 2% 5% 2% 5%;
+  background-repeat:no-repeat;
+  background-position:center;
 }
 .projects li:hover{
   background-color: #80ffff;
@@ -50,12 +52,10 @@ h1{
 #game{
   background-image:url("../projects/game/pup.png");
   background-size:contain;
-  background-repeat:no-repeat;
-  background-position:center;
 }
 
-#email{
-  background-image:url("../imgs/icons/email.png");
+#cheetsheet{
+  background-image:url("../projects/javascript.jpg");
   background-size:contain;
 }
 #linkedin{
