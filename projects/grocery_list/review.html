@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script src = "review.js"></script>
+      <meta charset ="utf-8">
+      <link rel ="stylesheet" type = "text/css" href = "review.css">
+      <link href='https://fonts.googleapis.com/css?family=Lato:400,900,100,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+      <title>grocery list</title>
+    </head>
+    <body>
+      <main>
+      <header>
+        <h1>
+        Grocery<span id ="list">list</span>
+        </h1>
+        <h2>
+        Your list:
+        </h2>
+      </header>
+      <p id = "text">
+      </p>
+      <form id = "form">
+        Item : <br>
+        <input type="text" name="item" id = "item" value="">
+        <br>
+        Quantity : <br>
+        <input type = "text" name = "quantity" id = "quantity" value="">
+      </form>
+      <ul>
+        <li><button type = "button" id = "print" onclick = "print_list()">
+        Print List
+        </button></li>
+        <li><button id = "add" onclick = "add()">
+        Add Item / Update Quantity
+        </button></li>
+        <li><button id = "remove" onclick = "take_off()">
+        Remove Item
+        </button></li>
+      </ul>
+    </main>
+    </body>
+  </html>

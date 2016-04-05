@@ -1,0 +1,79 @@
+@font-face{
+  font-family:"scriptina";
+  src:url("scriptina/SCRIPTIN.ttf");
+}
+
+html{
+  font-family: 'Lato', sans-serif;
+  /*background-color:#0099ff;*/
+  /*color:white;*/
+  font-weight:100;
+  text-align:center;
+  color:white;
+  background-image:url("grocery.png");
+  background-size:cover;
+}
+
+main{
+  background-color:rgba(0, 0, 0, 0.5);
+  width:50%;
+  border-radius:20px;
+  padding:30px;
+  margin:0 auto 0 auto;
+}
+
+header{
+  width:100%;
+  text-align:center;
+
+}
+
+h1{
+  font-size:4em;
+  /*color:#ffffcc;*/
+  font-weight:900;
+  color:#ccff66;
+}
+
+span{
+  font-weight:300;
+  color:#ff9933;
+}
+
+h2{
+  font-weight:100;
+}
+
+
+ul{
+  padding:0;
+}
+li{
+  list-style-type:none;
+  margin:10px 10px 10px 10px;
+}
+form{
+  width:40%;
+  text-align:left;
+  margin:0 auto 0 auto;
+  background-color:#88cc00;
+  padding:20px;
+  border-radius:10px;
+  color:white;
+}
+
+input{
+  width:100%;
+}
+
+button{
+  background-color:#669900;
+  color:white;
+  border-radius:10px;
+  padding:10px;
+  border:1px solid #336600;
+  text-transform: uppercase;
+  letter-spacing:2px;
+  cursor:pointer;
+  opacity:0.8;
+}

@@ -58,8 +58,8 @@ h1{
   background-image:url("../projects/javascript.jpg");
   background-size:contain;
 }
-#linkedin{
-  background-image:url("../imgs/icons/linkedin.png");
+#grocery{
+  background-image:url("../projects/grocery_list/screenshot.png");
   background-size:contain;
 }
 #github{
