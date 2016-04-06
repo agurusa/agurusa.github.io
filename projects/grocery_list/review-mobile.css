@@ -6,23 +6,36 @@ html{
 }
 
 main{
-  width:70%;
+  width:100%;
   border-radius:0;
-  top:0;
-  bottom:0;
-  position:fixed;
-  left:0;
-  right:0;
-  padding:0;
   overflow-y:scroll;
+  margin:0;
+  padding:0;
 }
 
 header{
   font-size:10px;
 }
 
+article{
+  width:40%;
+  margin:0;
+  float:left;
+}
+
+#user{
+  width:50%;
+  float:left;
+}
+
+form{
+  width:70%;
+  padding-top:0;
+}
+
 #buttons{
-  width:100%
+  width:100%;
+  margin:0 0 0 0;
 }
 
 button{
