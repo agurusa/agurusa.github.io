@@ -26,14 +26,14 @@ var size = Object.keys(posts).length;
 
   var current_page = window.location.pathname
     for(var i = 0; i < size; i++){
-      if(current_page === ("/Users/aarthigurusami/devbootcamp/phase0/agurusa.github.io/blog/" + posts[0])){
+      if(current_page === ("/blog/" + posts[0])){
         $("#previous").css("display","none");
       }
-      if(current_page === "/Users/aarthigurusami/devbootcamp/phase0/agurusa.github.io/blog/"+ posts[size-1]){
+      if(current_page === "/blog/"+ posts[size-1]){
         $("#next").css("display","none");
         var previous = posts[i-1];
       }
-      else if (current_page === ("/Users/aarthigurusami/devbootcamp/phase0/agurusa.github.io/blog/"+ posts[i])){
+      else if (current_page === ("/blog/"+ posts[i])){
         var next = posts[i+1];
         var previous = posts[i-1];
       }
