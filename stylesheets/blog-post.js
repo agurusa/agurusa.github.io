@@ -18,7 +18,9 @@ $(document).ready(function(){
 
      "javascript.html",
 
-    "tech.html"
+    "tech.html",
+
+    "blogging.html",
   ];
 
 
