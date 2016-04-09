@@ -6,20 +6,6 @@ body{
   background-size:contain;
 }
 
-main{
-  width:75%;
-  margin:0 auto 10em auto;
-  text-align:center;
-}
-
-h1{
-  text-align:center;
-  width:50%;
-  font-family:"Pt Sans Narrow";
-  margin:0 auto 0 auto;
-  letter-spacing:8px;
-  font-size:4em;
-}
 
 main a{
   color:#ff3399;

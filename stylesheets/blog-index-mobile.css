@@ -1,33 +1,5 @@
 @media only screen and (max-device-width: 740px){
 
-.main_nav{
-  float:left;
-  background-color:white;
-  padding:0;
-  max-width:200px;
-}
-
-.main_nav ul{
-  background-color:white;
-  position:relative;
-}
-
-.main_nav li{
-  display:block;
-  height:100px;
-  width:100px;
-  position:relative;
-  z-index:4;
-  background-color:#f4ccff;
-}
-.main_nav li a{
-  position:relative;
-}
-
-header{
-  font-size:4em;
-}
-
 .blog{
   padding:0;
   margin: 0 auto 0 auto;
@@ -43,33 +15,5 @@ header{
 span{
   font-size:2em;
   text-align:center;
-}
-#first{
-  background-image:url("../imgs/icons/home_small.png");
-  background-size:contain;
-  background-color:#f4ccff;
-}
 
-#second{
-  background-image:url("../imgs/icons/about_small.png");
-  background-size:contain;
-}
-#third{
-  background-image:url("../imgs/icons/blog_small.png");
-  background-size:contain;
-}
-#fourth{
-  background-image:url("../imgs/icons/projects_small.png");
-  background-size:contain;
-}
-#resume{
-  background-image:url("../imgs/icons/resume_small.png");
-  background-size:contain;
-  background-color:#66ffd9;
-}
-#contact{
-  background-image:url("../imgs/icons/contact_small.png");
-  background-size:contain;
-  background-color:#66ffd9;
-}
 }

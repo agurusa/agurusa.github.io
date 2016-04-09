@@ -1,76 +1,18 @@
 @media only screen and (max-device-width: 740px){
 
 body{
-background-image:url("../imgs/octopus_hand_2.png");
-background-position:bottom;
-}
-.main_nav{
-  float:left;
-  background-color:transparent;
-  padding:0;
-  max-width:200px;
-  position:fixed;
+  background-image:url("../imgs/octopus_hand_2.png");
+  background-position:bottom;
 }
 
-.main_nav ul{
-  background-color:transparent;
-  position:relative;
-}
 
-.main_nav li{
-  display:block;
-  height:100px;
-  width:100px;
-  position:relative;
-  z-index:4;
-  background-color:#f4ccff;
-}
-.main_nav li a{
-  position:relative;
-}
-#first{
-  background-image:url("../imgs/icons/home_small.png");
-  background-size:contain;
-  background-color:#f4ccff;
-}
-
-#second{
-  background-image:url("../imgs/icons/about_small.png");
-  background-size:contain;
-}
-#third{
-  background-image:url("../imgs/icons/blog_small.png");
-  background-size:contain;
-}
-#fourth{
-  background-image:url("../imgs/icons/projects_small.png");
-  background-size:contain;
-}
-#resume{
-  display:block;
-  background-image:url("../imgs/icons/resume_small.png");
-  background-size:contain;
-  background-color:#66ffd9;
-}
-#contact{
-  display:block;
-  background-image:url("../imgs/icons/contact_small.png");
-  background-size:contain;
-  background-color:#66ffd9;
-}
-header{
-  letter-spacing: 7px;
-  font-size:2em;
-  margin:0 200px 0 200px;
-  background-color:none;
-}
 .contact ul{
   padding:0 0 0 0;
 }
 
 .contact li{
-  height:170px;
-  width:170px;
+  height:150px;
+  width:150px;
 }
 
 }

@@ -1,17 +1,6 @@
-@font-face{
-  font-family:"Pt Sans Narrow";
-  src:url("../fonts/PT-Sans/PTN57F.ttf");
-}
-
-html{
-  font-family:"Pt Sans Narrow";
-  color:#404040;
-  font-size:1em;
-  letter-spacing:2px;
-}
 header{
-  position:relative;
-  text-align:center;
+  width:80%;
+  margin:0 auto 0 auto;
 }
 h1{
   font-size:2em;
@@ -43,6 +32,7 @@ main{
   margin-bottom:20%;
   float:left;
   margin-left:5%;
+  text-align:left;
 }
 aside{
   position:fixed;
@@ -108,4 +98,34 @@ aside a:hover{
   transition: background .5s ease-in-out;
   -moz-transition: background .5s ease-in-out;
   -webkit-transition: background .5s ease-in-out;
+}
+
+#tabs{
+  width:80%;
+}
+#tabs li{
+  width:5em;
+  height:5em;
+  border-radius:50%;
+  margin:2% 3%  2%  3%;
+  padding:0;
+  background-color:rgb(249,230,255);
+  display:inline-block;
+  text-align:center;
+  background-size:contain;
+}
+#previous{
+  float:left;
+  background-image:url("../imgs/icons/previous.png");
+}
+
+#next{
+  float:right;
+  background-image:url("../imgs/icons/next.png");
+}
+
+#tabs li a{
+  color:transparent;
+  padding:20px;
+  float:right;
 }

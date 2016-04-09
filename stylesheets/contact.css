@@ -15,107 +15,7 @@ body{
   background-size:contain;
 }
 
-/*navigation menu*/
-nav{
-  width:100%;
-  text-align:center;
-  background-color:rgba(255,255,255, .8);
-}
 
-nav ul li{
-  display:inline-block;
-  width:5em;
-  height:5em;
-  border-radius:50%;
-  margin:2% 7%  2%  7%;
-  padding:0;
-  background-color:rgb(249,230,255);
-}
-
-#first{
-  background-color:rgba(249, 230, 255,.7);
-  background-image:url("../imgs/Logo_2.png");
-  background-size:contain;
-  background-repeat:no-repeat;
-}
-
-#second{
-  background-image:url("../imgs/icons/about.png");
-  background-size:contain;
-}
-#second:hover{
-  background-color:#ffffcc;
-}
-
-#third{
-  background-image:url("../imgs/icons/blog.png");
-  background-size:contain;
-}
-#third:hover{
-  background-color:#ffe6cc;
-}
-
-#fourth{
-  background-image:url("../imgs/icons/projects.png");
-  background-size:contain;
-}
-#fourth:hover{
-  background-color:#ccffff;
-}
-
-#resume{
-  display:none;
-}
-#contact{
-  display:none;
-}
-
-
-nav li a{
-  text-decoration:none;
-  color:transparent;
-  padding:25px;
-  margin:5% 0 5% 0;
-  border:1px solid transparent;
-  letter-spacing: 1.5em;
-  float:left;
-}
-
-nav li a:hover{
-  color:#1b1221;
-  animation-duration: .5s;
-  animation-name: slideout;
-}
-
-@keyframes slideout{
-  from{
-    letter-spacing:1em;
-
-  }
-  to{
-    letter-spacing: 1.5em;
-  }
-}
-
-main{
-  text-align:center;
-  top:40%;
-  right:0;
-  bottom:0;
-  left:0;
-}
-
-/*h1 text formatting*/
-h1{
-  text-align:center;
-  color:#330026;
-  position:relative;
-  width:100%;
-  font-family:"Pt Sans Narrow";
-  letter-spacing:8px;
-  font-size:4em;
-  background-color: rgba(255,255,255,.8);
-}
 .contact{
   width:50%;
   margin:0 auto 0 auto;
@@ -132,9 +32,7 @@ h1{
   background-color: #bfff80;
   margin: 2% 5% 2% 5%;
 }
-.contact li:hover{
-  background-color: #80ffff;
-}
+
 
 #call{
   background-image:url("../imgs/icons/contact.png");
@@ -157,24 +55,12 @@ h1{
   text-decoration:none;
   color:transparent;
   padding:25px;
-  letter-spacing:8px;
-  font-size: 2em;
+  letter-spacing:6px;
+  font-size: 1.5em;
   float:left;
 }
 .contact li a:hover{
   color:#1b1221;
-  animation-duration: .5s;
-  animation-name: slideout_2;
-}
-
-@keyframes slideout_2{
-  from{
-    letter-spacing:1px;
-
-  }
-  to{
-    letter-spacing: 8px;
-  }
 }
 
 footer{

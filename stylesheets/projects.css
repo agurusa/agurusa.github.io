@@ -5,27 +5,8 @@ body{
   background-attachment:fixed;
   background-size:contain;
 }
-h1{
-  background-color:transparent;
-  text-align:center;
-  width:100%;
-  font-family:"Pt Sans Narrow";
-  margin:0 auto 0 auto;
-  letter-spacing:8px;
-  font-size:4em;
-}
-#resume{
-  display:inline-block;
-  background-color:#dfff80;
-  background-image:url("../imgs/icons/resume.png");
-  background-size:contain;
-}
-#contact{
-  display:inline-block;
-  background-color:#dfff80;
-  background-image:url("../imgs/icons/contact.png");
-  background-size:contain;
-}
+
+
 .projects{
   width:80%;
   margin:0 auto 0 auto;
@@ -44,9 +25,6 @@ h1{
   margin: 2% 5% 2% 5%;
   background-repeat:no-repeat;
   background-position:center;
-}
-.projects li:hover{
-  background-color: #80ffff;
 }
 
 #game{
@@ -70,22 +48,5 @@ h1{
   text-decoration:none;
   color:transparent;
   padding:25px;
-  letter-spacing:8px;
-  font-size: 2em;
   float:left;
-}
-.projects li a:hover{
-  color:#1b1221;
-  animation-duration: .5s;
-  animation-name: slideout_2;
-}
-
-@keyframes slideout_2{
-  from{
-    letter-spacing:1px;
-
-  }
-  to{
-    letter-spacing: 8px;
-  }
 }
